@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 16 - Final Project</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,15 +38,15 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 16: Presentasi Proyek Mini</h3>
+                    <h3 class="subtitle">Pertemuan 16: Presentasi Proyek Mini</h3>
                 </div>
             </section>
 
             <!-- === SLIDE 2: WELCOME === -->
             <section>
-                <h3>Final Presentation Day 🎓</h3>
+                <h3>Final Presentation Day <i class="bi bi-mortarboard"></i></h3>
                 <p>Selamat datang di puncak perkuliahan Pengenalan Komputasi.</p>
-                <div class="card" style="background: #e8f5e9;">
+                <div class="card card-success">
                     <p class="text-small"><em>"Talk is cheap. Show me the code."</em> - Linus Torvalds</p>
                 </div>
             </section>
@@ -55,8 +58,8 @@
                     <div class="flex-col">
                         <ul class="text-small">
                             <li>⏳ <strong>Waktu:</strong> 10 Menit/Kelompok.</li>
-                            <li>🗣️ <strong>Speaker:</strong> Semua anggota harus bicara.</li>
-                            <li>💻 <strong>Demo:</strong> Tunjukkan program berjalan live.</li>
+                            <li><i class="bi bi-chat-quote"></i> <strong>Speaker:</strong> Semua anggota harus bicara.</li>
+                            <li><i class="bi bi-laptop"></i> <strong>Demo:</strong> Tunjukkan program berjalan live.</li>
                         </ul>
                     </div>
                     <div class="flex-col card">
@@ -129,7 +132,7 @@
             <!-- === SLIDE 7: CLOSING MESSAGE === -->
             <section>
                 <h1>Terima Kasih</h1>
-                <h3 style="color: #666;">Sampai Jumpa di Semester Depan! 👋</h3>
+                <h3 class="subtitle">Sampai Jumpa di Semester Depan! <i class="bi bi-hand-wave"></i></h3>
                 <br>
                 <div style="font-size: 0.7em;">
                     <p><strong>[Nama Dosen]</strong></p>
@@ -141,6 +144,7 @@
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -148,12 +152,16 @@
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

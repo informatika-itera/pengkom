@@ -1,6 +1,6 @@
 /*!
- * reveal.js 5.2.1
- * https://revealjs.com
+ * reveal.js 1.0.0
+ * 
  * MIT licensed
  *
  * Copyright (C) 2011-2024 Hakim El Hattab, https://hakim.se

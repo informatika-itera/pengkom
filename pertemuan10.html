@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 10 - String</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 10: Manipulasi String</h3>
+                    <h3 class="subtitle">Pertemuan 10: Manipulasi String</h3>
                 </div>
             </section>
 
@@ -69,10 +72,10 @@
                 <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
                     <p>Setelah pertemuan ini, Anda diharapkan mampu:</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div class="card" style="padding: 15px;">✅ Menggunakan Method String</div>
-                        <div class="card" style="padding: 15px;">✅ Melakukan Slicing Teks</div>
-                        <div class="card" style="padding: 15px;">✅ Format tampilan output</div>
-                        <div class="card" style="padding: 15px;">✅ Membuat validasi input sederhana</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menggunakan Method String</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Melakukan Slicing Teks</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Format tampilan output</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Membuat validasi input sederhana</div>
                     </div>
                 </div>
             </section>
@@ -158,7 +161,7 @@ print(f"Matkul: {matkul}, Tahun: {tahun}")
             <section>
                 <h3>String Formatting (f-string)</h3>
                 <p class="text-small">Cara modern menyisipkan variabel ke string.</p>
-                <div class="card" style="background: #e8f5e9;">
+                <div class="card card-success">
                     <pre><code class="python">
 nama = "Budi"
 nilai = 95.5678
@@ -198,18 +201,18 @@ print(f"Rp {uang:,}")  # Rp 5,000,000
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <ul class="text-small">
-                    <li>✅ <strong>Methods:</strong> <code>upper</code>, <code>lower</code>, <code>strip</code>,
+                    <li><i class="bi bi-check-circle"></i> <strong>Methods:</strong> <code>upper</code>, <code>lower</code>, <code>strip</code>,
                         <code>replace</code>.</li>
-                    <li>✅ <strong>Search:</strong> <code>find</code>, <code>count</code>, <code>startswith</code>.</li>
-                    <li>✅ <strong>Slicing:</strong> <code>text[start:end]</code>.</li>
-                    <li>✅ <strong>Formatting:</strong> <code>f"Teks {variabel}"</code>.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Search:</strong> <code>find</code>, <code>count</code>, <code>startswith</code>.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Slicing:</strong> <code>text[start:end]</code>.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Formatting:</strong> <code>f"Teks {variabel}"</code>.</li>
                 </ul>
             </section>
 
             <!-- === SLIDE 10: TUGAS === -->
             <section>
-                <h3>Tugas Pertemuan 10 📝</h3>
-                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                <h3>Tugas Pertemuan 10 <i class="bi bi-list-check"></i></h3>
+                <div class="card card-warning text-left">
                     <ol class="text-small">
                         <li><strong>Analisis Teks:</strong>
                             <br>Input sebuah paragraf. Hitung jumlah huruf vokal, konsonan, dan jumlah kata.
@@ -227,7 +230,7 @@ print(f"Rp {uang:,}")  # Rp 5,000,000
             <!-- === SLIDE 11: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>Libraries & Modules 📚</h4>
+                <h4>Libraries & Modules <i class="bi bi-book"></i></h4>
                 <p class="text-small">Menggunakan kode orang lain untuk mempercepat pekerjaan kita.</p>
                 <ul class="text-small" style="columns: 2;">
                     <li>Math Library</li>
@@ -246,6 +249,7 @@ print(f"Rp {uang:,}")  # Rp 5,000,000
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -253,12 +257,16 @@ print(f"Rp {uang:,}")  # Rp 5,000,000
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

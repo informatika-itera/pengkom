@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 12 - Data Visualization</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 12: Data Visualization</h3>
+                    <h3 class="subtitle">Pertemuan 12: Data Visualization</h3>
                 </div>
             </section>
 
@@ -69,10 +72,10 @@
                 <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
                     <p>Setelah pertemuan ini, Anda diharapkan mampu:</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div class="card" style="padding: 15px;">✅ Memahami jenis grafik</div>
-                        <div class="card" style="padding: 15px;">✅ Menggunakan Matplotlib</div>
-                        <div class="card" style="padding: 15px;">✅ Membuat Line, Bar, Pie Chart</div>
-                        <div class="card" style="padding: 15px;">✅ Menambahkan Label & Judul</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Memahami jenis grafik</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menggunakan Matplotlib</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Membuat Line, Bar, Pie Chart</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menambahkan Label & Judul</div>
                     </div>
                 </div>
             </section>
@@ -82,11 +85,11 @@
                 <h3>Jenis-Jenis Chart</h3>
                 <div class="flex-container" style="flex-wrap: wrap;">
                     <div class="card" style="flex: 1; min-width: 200px; margin: 5px;">
-                        <h4>Line Plot 📈</h4>
+                        <h4>Line Plot <i class="bi bi-graph-up"></i></h4>
                         <p class="text-smaller">Untuk melihat tren seiring waktu (Time Series).</p>
                     </div>
                     <div class="card" style="flex: 1; min-width: 200px; margin: 5px;">
-                        <h4>Bar Chart 📊</h4>
+                        <h4>Bar Chart <i class="bi bi-bar-chart"></i></h4>
                         <p class="text-smaller">Membandingkan kategori/jumlah.</p>
                     </div>
                     <div class="card" style="flex: 1; min-width: 200px; margin: 5px;">
@@ -159,7 +162,7 @@ plt.show()
 
             <!-- === SLIDE 8: SEABORN === -->
             <section>
-                <h3>Intro to Seaborn 🌊</h3>
+                <h3>Intro to Seaborn <i class="bi bi-water"></i></h3>
                 <p class="text-small">Library di atas Matplotlib yang lebih cantik & mudah untuk statistik.</p>
                 <pre><code class="python" data-trim>
 import seaborn as sns
@@ -196,17 +199,17 @@ plt.show()
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <ul class="text-small">
-                    <li>✅ <strong>Matplotlib</strong>: <code>plt.plot</code>, <code>plt.bar</code>,
+                    <li><i class="bi bi-check-circle"></i> <strong>Matplotlib</strong>: <code>plt.plot</code>, <code>plt.bar</code>,
                         <code>plt.scatter</code>.</li>
-                    <li>✅ <strong>Komponen</strong>: Title, XLabel, YLabel.</li>
-                    <li>✅ <strong>Seaborn</strong>: Alternatif visualisasi statistik yang lebih modern.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Komponen</strong>: Title, XLabel, YLabel.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Seaborn</strong>: Alternatif visualisasi statistik yang lebih modern.</li>
                 </ul>
             </section>
 
             <!-- === SLIDE 11: TUGAS === -->
             <section>
-                <h3>Tugas Pertemuan 12 📝</h3>
-                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                <h3>Tugas Pertemuan 12 <i class="bi bi-list-check"></i></h3>
+                <div class="card card-warning text-left">
                     <ul class="text-small">
                         <li><strong>Dashboard Sederhana:</strong>
                             <br>Buat program yang menampilkan 2 grafik dalam 1 figure (Subplot).
@@ -222,7 +225,7 @@ plt.show()
             <!-- === SLIDE 12: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>File Handling (CSV) 📂</h4>
+                <h4>File Handling (CSV) <i class="bi bi-folder"></i></h4>
                 <p class="text-small">Membaca dan menulis data dari file eksternal sungguhan.</p>
                 <pre><code class="python">
 df = pd.read_csv("data_penjualan.csv")
@@ -239,6 +242,7 @@ print(df.head())
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -246,12 +250,16 @@ print(df.head())
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

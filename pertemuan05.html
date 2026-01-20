@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 5 - Perulangan</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 5: Perulangan (Loops)</h3>
+                    <h3 class="subtitle">Pertemuan 5: Perulangan (Loops)</h3>
                 </div>
             </section>
 
@@ -70,10 +73,10 @@
                 <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
                     <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div class="card" style="padding: 15px;">✅ Menjelaskan konsep loop</div>
-                        <div class="card" style="padding: 15px;">✅ Menulis for loop</div>
-                        <div class="card" style="padding: 15px;">✅ Menulis while loop</div>
-                        <div class="card" style="padding: 15px;">✅ Menggunakan break/continue</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menjelaskan konsep loop</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menulis for loop</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menulis while loop</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menggunakan break/continue</div>
                     </div>
                 </div>
             </section>
@@ -85,7 +88,7 @@
                     <div class="flex-col text-left text-small">
                         <p><strong>Perulangan (Loop)</strong> adalah struktur kontrol yang memungkinkan blok kode
                             dieksekusi berulang kali.</p>
-                        <div class="card" style="margin-top: 20px; background: #ffebee;">
+                        <div class="card card-danger" style="margin-top: 20px;">
                             <strong>TANPA Loop:</strong><br>
                             <code>print("Hello")</code><br>
                             <code>print("Hello")</code><br>
@@ -95,7 +98,7 @@
                         </div>
                     </div>
                     <div class="flex-col">
-                        <div class="card" style="background: #e8f5e9;">
+                        <div class="card card-success">
                             <strong>DENGAN Loop:</strong>
                             <pre><code class="python">
 for i in range(5):
@@ -214,10 +217,10 @@ while i < 5:
 
             <!-- === SLIDE 9: INFINITE LOOP === -->
             <section>
-                <h3>⚠️ Peringatan: Infinite Loop</h3>
+                <h3><i class="bi bi-exclamation-triangle"></i> Peringatan: Infinite Loop</h3>
                 <div class="flex-container">
                     <div class="flex-col card" style="border-left: 5px solid #28a745;">
-                        <h4 style="color: #28a745;">✅ BENAR</h4>
+                        <h4 style="color: #28a745;"><i class="bi bi-check-circle"></i> BENAR</h4>
                         <pre><code class="python">
 i = 0
 while i < 5:
@@ -226,7 +229,7 @@ while i < 5:
                             </code></pre>
                     </div>
                     <div class="flex-col card" style="border-left: 5px solid #dc3545;">
-                        <h4 style="color: #dc3545;">❌ SALAH (BAHAYA)</h4>
+                        <h4 style="color: #dc3545;"><i class="bi bi-x-circle"></i> SALAH (BAHAYA)</h4>
                         <pre><code class="python">
 i = 0
 while i < 5:
@@ -330,18 +333,18 @@ while True:
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <ul class="text-small">
-                    <li>✅ <strong>for loop</strong>: Untuk iterasi yang jumlahnya jelas.</li>
-                    <li>✅ <strong>while loop</strong>: Untuk iterasi berbasis kondisi.</li>
-                    <li>✅ <strong>range()</strong>: Membuat urutan angka.</li>
-                    <li>✅ <strong>Flow Control</strong>: <code>break</code> (stop) dan <code>continue</code> (skip).
+                    <li><i class="bi bi-check-circle"></i> <strong>for loop</strong>: Untuk iterasi yang jumlahnya jelas.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>while loop</strong>: Untuk iterasi berbasis kondisi.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>range()</strong>: Membuat urutan angka.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Flow Control</strong>: <code>break</code> (stop) dan <code>continue</code> (skip).
                     </li>
                 </ul>
             </section>
 
             <!-- === SLIDE 15: TUGAS === -->
             <section>
-                <h3>Tugas Pertemuan 5 📝</h3>
-                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                <h3>Tugas Pertemuan 5 <i class="bi bi-list-check"></i></h3>
+                <div class="card card-warning text-left">
                     <ol class="text-small">
                         <li><strong>Hitung Rata-rata:</strong>
                             <br>Input n angka loop, jumlahkan dan bagi n.
@@ -363,7 +366,7 @@ while True:
             <!-- === SLIDE 16: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>List (Daftar) 📚</h4>
+                <h4>List (Daftar) <i class="bi bi-list"></i></h4>
                 <p class="text-small">Kita akan belajar cara menyimpan BANYAK data (seperti rak buku) dalam SATU
                     variabel.</p>
                 <pre><code class="python">
@@ -381,6 +384,7 @@ print(buah[1])  # jeruk
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -388,12 +392,16 @@ print(buah[1])  # jeruk
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

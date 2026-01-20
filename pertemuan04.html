@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 4 - Kondisi Majemuk</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 4: Kondisi Majemuk (if-elif-else)</h3>
+                    <h3 class="subtitle">Pertemuan 4: Kondisi Majemuk (if-elif-else)</h3>
                 </div>
             </section>
 
@@ -69,10 +72,10 @@
                 <div class="text-left" style="font-size: 0.8em; margin-top: 30px;">
                     <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div class="card" style="padding: 15px;">✅ Menulis struktur if-elif-else</div>
-                        <div class="card" style="padding: 15px;">✅ Menggunakan operator logika</div>
-                        <div class="card" style="padding: 15px;">✅ Membuat nested if</div>
-                        <div class="card" style="padding: 15px;">✅ Memecahkan masalah kompleks</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menulis struktur if-elif-else</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Menggunakan operator logika</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Membuat nested if</div>
+                        <div class="card" style="padding: 15px;"><i class="bi bi-check-circle"></i> Memecahkan masalah kompleks</div>
                     </div>
                 </div>
             </section>
@@ -328,22 +331,22 @@ else:
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <ul class="text-small">
-                    <li>✅ <strong>if-elif-else</strong>: Menangani banyak kemungkinan.</li>
-                    <li>✅ <strong>Operator Logika</strong>:
+                    <li><i class="bi bi-check-circle"></i> <strong>if-elif-else</strong>: Menangani banyak kemungkinan.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Operator Logika</strong>:
                         <ul>
                             <li><code>and</code>: Ketat (Semua harus True)</li>
                             <li><code>or</code>: Longgar (Salah satu True)</li>
                             <li><code>not</code>: Pembalikan</li>
                         </ul>
                     </li>
-                    <li>✅ <strong>Nested If</strong>: If di dalam If untuk logika bertingkat.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Nested If</strong>: If di dalam If untuk logika bertingkat.</li>
                 </ul>
             </section>
 
             <!-- === SLIDE 15: TUGAS === -->
             <section>
-                <h3>Tugas Pertemuan 4 📝</h3>
-                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                <h3>Tugas Pertemuan 4 <i class="bi bi-list-check"></i></h3>
+                <div class="card card-warning text-left">
                     <ol class="text-small">
                         <li><strong>Sistem Kategori BMI:</strong>
                             <br>Input berat & tinggi. Hitung BMI. Tentukan kurus/normal/gemuk/obesitas.
@@ -364,7 +367,7 @@ else:
             <!-- === SLIDE 16: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>Perulangan (Loops) 🔄</h4>
+                <h4>Perulangan (Loops) <i class="bi bi-arrow-repeat"></i></h4>
                 <div class="flex-container">
                     <div class="flex-col">
                         <ul class="text-small">
@@ -391,6 +394,7 @@ for i in range(5):
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -398,12 +402,16 @@ for i in range(5):
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 11 - Menggunakan Library</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 11: Menggunakan Library</h3>
+                    <h3 class="subtitle">Pertemuan 11: Menggunakan Library</h3>
                 </div>
             </section>
 
@@ -147,7 +150,7 @@ print(random.choice(buah))
 
             <!-- === SLIDE 6: PANDAS INTRO === -->
             <section>
-                <h3>Intro to Pandas 🐼</h3>
+                <h3>Intro to Pandas <i class="bi bi-bug"></i></h3>
                 <p class="text-small">Library paling populer untuk Analisis Data.</p>
                 <pre><code class="python" data-trim>
 import pandas as pd
@@ -212,8 +215,8 @@ print(df)
 
             <!-- === SLIDE 9: TUGAS === -->
             <section>
-                <h3>Tugas Pertemuan 11 📝</h3>
-                <div class="card text-left" style="background: #fff3cd; border: 1px solid #ffeeba;">
+                <h3>Tugas Pertemuan 11 <i class="bi bi-list-check"></i></h3>
+                <div class="card card-warning text-left">
                     <ul class="text-small">
                         <li><strong>1. Simulasi Dadu:</strong>
                             <br>Lempar dadu 100x. Hitung berapa kali muncul angka 6.
@@ -231,7 +234,7 @@ print(df)
             <!-- === SLIDE 10: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
-                <h4>Data Visualization 📊</h4>
+                <h4>Data Visualization <i class="bi bi-bar-chart"></i></h4>
                 <p class="text-small">Kita akan membuat grafik dari data menggunakan Matplotlib.</p>
                 <div style="display: flex; justify-content: center; gap: 10px;">
                     <div class="card">Line Plot</div>
@@ -249,6 +252,7 @@ print(df)
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -256,12 +260,16 @@ print(df)
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

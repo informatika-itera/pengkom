@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 15 - Quiz 2</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 15: Quiz 2 + Kerja Proyek</h3>
+                    <h3 class="subtitle">Pertemuan 15: Quiz 2 + Kerja Proyek</h3>
                 </div>
             </section>
 
@@ -77,11 +80,11 @@
             <section>
                 <h3>Sesi Kerja Proyek (Asistensi)</h3>
                 <div class="card" style="background: #e0f7fa;">
-                    <h4>🎯 Target Hari Ini</h4>
+                    <h4><i class="bi bi-bullseye"></i> Target Hari Ini</h4>
                     <ul class="text-small text-left">
-                        <li>✅ Finalisasi Algoritma & Flowchart.</li>
-                        <li>✅ Coding 70% selesai.</li>
-                        <li>✅ Integrasi Data (CSV) ke Program.</li>
+                        <li><i class="bi bi-check-circle"></i> Finalisasi Algoritma & Flowchart.</li>
+                        <li><i class="bi bi-check-circle"></i> Coding 70% selesai.</li>
+                        <li><i class="bi bi-check-circle"></i> Integrasi Data (CSV) ke Program.</li>
                     </ul>
                 </div>
                 <br>
@@ -92,7 +95,7 @@
 
             <!-- === SLIDE 5: REMINDER FINAL === -->
             <section>
-                <h3>Reminder: Final Presentation 📢</h3>
+                <h3>Reminder: Final Presentation <i class="bi bi-megaphone"></i></h3>
                 <p class="text-small">Minggu depan (Pertemuan 16) adalah Deadline!</p>
                 <div class="flex-container">
                     <div class="flex-col card" style="border-top: 5px solid #ff9800;">
@@ -122,6 +125,7 @@
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -129,12 +133,16 @@
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

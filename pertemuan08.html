@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 8 - UTS</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 8: Ujian Tengah Semester (UTS)</h3>
+                    <h3 class="subtitle">Pertemuan 8: Ujian Tengah Semester (UTS)</h3>
                 </div>
             </section>
 
@@ -44,7 +47,7 @@
                 <h3>Informasi UTS</h3>
                 <div class="flex-container">
                     <div class="flex-col text-left">
-                        <div class="card" style="background: #e3f2fd;">
+                        <div class="card card-info">
                             <ul class="text-small">
                                 <li><strong>Waktu:</strong> 100 Menit (1 Jam 40 Menit)</li>
                                 <li><strong>Sifat Ujian:</strong> Tutup Buku (Closed Book)</li>
@@ -131,10 +134,10 @@
                 <h3>Ketentuan & Tata Tertib</h3>
                 <div class="card" style="border-left: 5px solid #d32f2f;">
                     <ul class="text-small text-left">
-                        <li>🚫 Dilarang keras mencontek atau bekerja sama.</li>
-                        <li>🚫 HP harus disimpan di dalam tas.</li>
-                        <li>🚫 Koneksi internet hanya untuk submit jawaban (jika online).</li>
-                        <li>✅ Bawa Kartu Tanda Mahasiswa (KTM).</li>
+                        <li><i class="bi bi-slash-circle"></i> Dilarang keras mencontek atau bekerja sama.</li>
+                        <li><i class="bi bi-slash-circle"></i> HP harus disimpan di dalam tas.</li>
+                        <li><i class="bi bi-slash-circle"></i> Koneksi internet hanya untuk submit jawaban (jika online).</li>
+                        <li><i class="bi bi-check-circle"></i> Bawa Kartu Tanda Mahasiswa (KTM).</li>
                     </ul>
                 </div>
             </section>
@@ -174,7 +177,7 @@
             <!-- === SLIDE 8: CLOSING === -->
             <section>
                 <h1>Selamat Mengerjakan UTS</h1>
-                <h3 style="color: #2e7d32;">SEMANGAT! KITA BISA! 💪</h3>
+                <h3 style="color: #2e7d32;">SEMANGAT! KITA BISA! <i class="bi bi-hand-thumbs-up"></i></h3>
                 <p style="margin-top: 50px; font-size: 0.8em; font-style: italic;">"Kejujuran adalah modal utama
                     kesuksesan."</p>
             </section>
@@ -183,6 +186,7 @@
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -190,12 +194,16 @@
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>

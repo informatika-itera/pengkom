@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="lms-url" content="https://lms.itera.ac.id">
 
     <title>Pertemuan 7 - Quiz 1</title>
 
@@ -15,9 +16,11 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -35,7 +38,7 @@
             <section>
                 <div class="title-box">
                     <h1>Pengenalan Komputasi</h1>
-                    <h3 style="color: #666;">Pertemuan 7: Quiz 1</h3>
+                    <h3 class="subtitle">Pertemuan 7: Quiz 1</h3>
                 </div>
             </section>
 
@@ -100,13 +103,13 @@
 
             <!-- === SLIDE 4: ATURAN QUIZ === -->
             <section>
-                <h3>Aturan Quiz ⚠️</h3>
+                <h3>Aturan Quiz <i class="bi bi-exclamation-triangle"></i></h3>
                 <div class="card text-left" style="background: #fff8e1; border-left: 5px solid #ffc107;">
                     <ul class="text-small">
-                        <li>✅ <strong>Jujur:</strong> Dilarang membuka catatan atau browsing (kecuali open book).</li>
-                        <li>✅ <strong>Mandiri:</strong> Dilarang berkomunikasi dengan teman kiri/kanan.</li>
-                        <li>✅ <strong>Alat:</strong> Siapkan laptop untuk bagian coding.</li>
-                        <li>🚫 <strong>Pelanggaran:</strong> Nilai 0 dan sanksi akademik.</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Jujur:</strong> Dilarang membuka catatan atau browsing (kecuali open book).</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Mandiri:</strong> Dilarang berkomunikasi dengan teman kiri/kanan.</li>
+                        <li><i class="bi bi-check-circle"></i> <strong>Alat:</strong> Siapkan laptop untuk bagian coding.</li>
+                        <li><i class="bi bi-slash-circle"></i> <strong>Pelanggaran:</strong> Nilai 0 dan sanksi akademik.</li>
                     </ul>
                 </div>
             </section>
@@ -221,7 +224,7 @@ else:
                 <div style="font-size: 3em; font-weight: bold; color: #d32f2f;">
                     3... 2... 1...
                 </div>
-                <h3 style="margin-top: 50px;">GOOD LUCK! 🍀</h3>
+                <h3 style="margin-top: 50px;">GOOD LUCK! <i class="bi bi-star"></i></h3>
             </section>
 
             <!-- === SLIDE 11: CLOSING === -->
@@ -233,6 +236,7 @@ else:
         </div>
     </div>
 
+    <script src="js/theme-toggle.js"></script>
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
@@ -240,12 +244,16 @@ else:
     <script>
         Reveal.initialize({
             hash: true,
+            progress: true,
             center: true,
             transition: 'slide',
             slideNumber: 'c/t',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/emoji-to-icons.js"></script>
+    <script src="js/auto-layout.js"></script>
+    <script src="js/slide-enhancements.js"></script>
 </body>
 
 </html>
