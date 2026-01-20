@@ -162,7 +162,7 @@ print(umur)      # 20
                         <code style="background:#eee; padding:2px;">10, -5, 100</code>
                     </div>
                     <div class="pillar-box">
-                        <h4>Float</h4>
+                        <h4>Float (float)</h4>
                         <p>Bilangan Desimal</p>
                         <code style="background:#eee; padding:2px;">3.14, -0.5, 2.0</code>
                     </div>
@@ -183,17 +183,17 @@ print(umur)      # 20
             <section>
                 <h3>Cek Tipe Data</h3>
                 <pre><code class="python" data-trim>
-umur = 20
-print(type(umur))    # <class 'int'>
+umur = 20      # int
+print(type(umur))
 
-tinggi = 165.5
-print(type(tinggi))  # <class 'float'>
+tinggi = 165.5  # float
+print(type(tinggi))
 
-nama = "Budi"
-print(type(nama))    # <class 'str'>
+nama = "Budi"   # str
+print(type(nama))
 
-aktif = True
-print(type(aktif))   # <class 'bool'>
+aktif = True    # bool
+print(type(aktif))
                     </code></pre>
             </section>
 
@@ -303,8 +303,8 @@ print(type(aktif))   # <class 'bool'>
             <!-- === SLIDE 11: KONVERSI TIPE DATA === -->
             <section>
                 <h3>Konversi Tipe Data (Casting)</h3>
-                <div class="flex-container">
-                    <div class="flex-col card">
+                <div class="grid-2">
+                    <div class="card">
                         <h4>Fungsi Built-in</h4>
                         <ul class="text-smaller">
                             <li><code>int()</code>: ubah ke integer</li>
@@ -312,18 +312,23 @@ print(type(aktif))   # <class 'bool'>
                             <li><code>str()</code>: ubah ke string</li>
                         </ul>
                     </div>
-                    <div class="flex-col">
+                    <div>
                         <pre><code class="python" data-trim>
 angka_str = "100"
-# int(angka_str) + 5
-print(int(angka_str) + 5)  # 105
+# Casting string ke int, lalu penjumlahan
+print(int(angka_str) + 5)
 
 nilai = 99.9
-print(int(nilai))          # 99 (Pembulatan ke bawah)
+# Casting float ke int (pembulatan ke bawah)
+print(int(nilai))
 
 harga = 25000
-print("Rp " + str(harga))  # "Rp 25000"
+# Casting int ke string, lalu concatenation
+print("Rp " + str(harga))
                             </code></pre>
+                        <p class="text-smaller" style="margin-top: 10px; color: #666;">
+                            <strong>Catatan:</strong> Operator <code>+</code> berperan berbeda: penjumlahan untuk angka, concatenation untuk string.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -334,33 +339,55 @@ print("Rp " + str(harga))  # "Rp 25000"
                 <div class="card card-highlight text-left">
                     <p class="text-small">Fungsi <code>input()</code> digunakan untuk menerima masukan dari keyboard.
                     </p>
-                    <p class="text-small" style="color: red;"><i class="bi bi-exclamation-triangle"></i> WARNING: Hasil input() SELALU bertipe STRING!</p>
+                    <p class="text-small" style="color: red;"><i class="bi bi-exclamation-triangle"></i> WARNING: Hasil <code>input()</code> SELALU bertipe STRING!</p>
                 </div>
-                <pre><code class="python" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim>
 nama = input("Masukkan nama: ")
 print("Halo " + nama)
 
 # Kalau mau angka, HARUS dikonversi!
-umur = int(input("Masukkan umur: "))
-                    </code></pre>
+umur = input("Masukkan umur: ")
+print("Tipe data:", type(umur))
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Masukkan nama: Budi
+Halo Budi
+Masukkan umur: 20
+Tipe data: &lt;class 'str'&gt;
+                        </pre>
+                    </div>
+                </div>
             </section>
 
             <!-- === SLIDE 13: STUDI KASUS KALKULATOR === -->
             <section>
                 <h3>Contoh: Kalkulator Sederhana</h3>
-                <pre><code class="python" data-trim data-noescape>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Program</h4>
+                        <pre><code class="python" data-trim data-noescape>
 # Program Penjumlahan
 angka1 = float(input("Angka 1: ")) 
 angka2 = float(input("Angka 2: "))
 
 hasil = angka1 + angka2
 print("Hasil Penjumlahan:", hasil)
-                    </code></pre>
-                <div class="code-output">
-                    Output:
-                    Angka 1: 10
-                    Angka 2: 5.5
-                    Hasil Penjumlahan: 15.5
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <pre class="code-output" style="line-height: 1.1; margin: 0;">
+Angka 1: 10
+Angka 2: 5.5
+Hasil Penjumlahan: 15.5
+                        </pre>
+                    </div>
                 </div>
             </section>
 
@@ -422,41 +449,89 @@ print(nama)
                 </ul>
             </section>
 
-            <!-- === SLIDE 17: TUGAS === -->
+            <!-- === SLIDE 17: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 2 <i class="bi bi-list-check"></i></h3>
-                <div class="flex-container card card-warning">
-                    <div class="flex-col text-left">
+                <div class="grid-2">
+                    <div class="card card-warning">
+                        <h4>1. Kalkulator BMI <i class="bi bi-calculator"></i></h4>
+                        <p class="text-smaller"><strong>Rumus:</strong> BMI = berat / (tinggi * tinggi)</p>
                         <ol class="text-smaller">
-                            <li><strong>Kalkulator BMI:</strong> Input berat(kg) & tinggi(m), hitung BMI.</li>
-                            <li><strong>Kalkulator Diskon:</strong> Input harga & diskon(%), hitung harga akhir.</li>
-                            <li>Simpan file: <code>Tugas2_NIM_Nama.py</code></li>
+                            <li>Input berat (kg) dan tinggi (m).</li>
+                            <li>Hitung BMI menggunakan rumus.</li>
+                            <li>Tampilkan hasil dengan kategori (underweight, normal, overweight).</li>
                         </ol>
                     </div>
-                    <div class="flex-col text-center">
-                        <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
-                        <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                    <div class="card card-warning">
+                        <h4>2. Kalkulator Diskon <i class="bi bi-percent"></i></h4>
+                        <p class="text-smaller"><strong>Rumus:</strong> Harga Akhir = harga - (harga * diskon / 100)</p>
+                        <ol class="text-smaller">
+                            <li>Input harga asli dan persen diskon.</li>
+                            <li>Hitung potongan dan harga akhir.</li>
+                            <li>Tampilkan harga asli, diskon, dan harga akhir.</li>
+                        </ol>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 18: NEXT WEEK === -->
+            <!-- === SLIDE 18: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman mendalam, ikuti langkah-langkah berikut:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Analisis Masalah:</strong> Pahami rumus dan langkah perhitungan.</li>
+                        <li><strong>Desain Kode:</strong> Buat pseudocode atau outline sebelum coding.</li>
+                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas di setiap baris.</li>
+                        <li><strong>Testing:</strong> Jalankan kode dengan input berbeda, catat output.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan kode dan hasil di komentar file.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 19: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas2_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di notebook.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 21: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>Percabangan (Branching)</h4>
-                <pre><code class="python" style="font-size: 1.5em; text-align: center;">
+                <div class="card text-center">
+                    <pre><code class="python" style="font-size: 1.2em;">
 if nilai > 70:
     print("Lulus!")
 else:
     print("Remedial")
                     </code></pre>
+                </div>
                 <p class="text-small">Persiapkan diri membaca materi <strong>if-else</strong>.</p>
             </section>
 
-            <!-- === SLIDE 19: Q&A === -->
+            <!-- === SLIDE 22: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
