@@ -214,7 +214,7 @@
                             <li>Pemasakan santan</li>
                             <li>Proses pengeringan</li>
                         </ul>
-                        <p style="margin-top: 10px;"><em>"Dengan memecah langkah, masak rendang jadi lebih mudah dan sistematis."</em></p>
+                        <p style="margin-top: 10px;"><em>"Dengan memecah langkah, jadi lebih sistematis."</em></p>
                     </div>
                 </div>
             </section>
@@ -278,24 +278,32 @@
                             <li>Tunggu 3 menit</li>
                             <li>Tiriskan & beri bumbu</li>
                         </ol>
-                        <p style="margin-top: 10px;"><em>"Langkah-langkah yang jelas memastikan mie matang sempurna."</em></p>
+                        <p style="margin-top: 10px;"><em>"Langkah-langkah yang jelas memastikan tujuan tercapai."</em></p>
                     </div>
                 </div>
             </section>
 
             <!-- SLIDE 13: STUDI KASUS -->
             <section>
-                <h3>Studi Kasus: Algoritma Pencarian Linear <i class="bi bi-search"></i></h3>
-                <p class="text-small" style="margin-bottom: 30px;">Bagaimana menerapkan CT saat mencari nama dalam daftar kontak?</p>
-                <div
-                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; font-size: 0.6em; align-items: stretch;">
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div class="card"><strong><i class="bi bi-puzzle"></i> Decomposition:</strong><br>Bagi masalah: <i class="bi bi-list"></i> Ambil daftar & nama yang dicari <i class="bi bi-arrow-right"></i> Periksa satu per satu <i class="bi bi-arrow-right"></i> Berhenti jika ketemu</div>
-                        <div class="card"><strong><i class="bi bi-search"></i> Pattern:</strong><br>Pencarian seperti ini selalu mulai dari awal dan cek sampai akhir.</div>
-                        <div class="card"><strong><i class="bi bi-eye"></i> Abstraction:</strong><br>Abaikan urutan abjad, fokus apakah nama sama persis.</div>
+                <h3>Studi Kasus: Pencarian Linear <i class="bi bi-search"></i></h3>
+                <p class="text-small" style="margin-bottom: 20px;">Bagaimana menerapkan CT saat mencari nama dalam daftar kontak?</p>
+                <div class="flex-container" style="align-items: flex-start; gap: 20px;">
+                    <div class="flex-col" style="flex: 1;">
+                        <div class="card text-smaller" style="margin-bottom: 10px;"><strong><i class="bi bi-puzzle"></i> Decomposition:</strong><br>Bagi masalah: Persiapan daftar kontak → Periksa satu per satu → Berhenti jika ketemu</div>
+                        <div class="card text-smaller" style="margin-bottom: 10px;"><strong><i class="bi bi-search"></i> Pattern:</strong><br>Pencarian seperti ini selalu mulai dari awal dan cek sampai akhir.</div>
+                        <div class="card text-smaller"><strong><i class="bi bi-eye"></i> Abstraction:</strong><br>Abaikan urutan abjad, fokus apakah nama sama persis.</div>
                     </div>
-                    <div style="display: flex; flex-direction: column;">
-                        <div class="card" style="flex: 1;"><strong><i class="bi bi-list-ol"></i> Algorithm:</strong><br><ol style="margin: 0; padding-left: 1em; line-height: 1.4; font-size: inherit;"><li style="margin-bottom: 5px;">Mulai dari nama pertama</li><li style="margin-bottom: 5px;">Cek apakah nama ini sama dengan yang dicari</li><li style="margin-bottom: 5px;">Jika sama, beri tahu posisinya</li><li style="margin-bottom: 5px;">Jika tidak sama, lanjut ke nama berikutnya</li><li style="margin-bottom: 5px;">Ulangi sampai semua nama diperiksa</li><li>Jika sampai akhir tidak ada yang sama, beri tahu tidak ditemukan</li></ol></div>
+                    <div class="flex-col" style="flex: 1;">
+                        <div class="card text-smaller"><strong><i class="bi bi-list-ol"></i> Algorithm:</strong><br>
+                            <ol style="margin: 0; padding-left: 1em; line-height: 1.3;">
+                                <li>Mulai dari nama pertama</li>
+                                <li>Cek apakah nama ini sama dengan yang dicari</li>
+                                <li>Jika sama, beri tahu posisinya</li>
+                                <li>Jika tidak sama, lanjut ke nama berikutnya</li>
+                                <li>Ulangi sampai semua nama diperiksa</li>
+                                <li>Jika sampai akhir tidak ada yang sama, beri tahu tidak ditemukan</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </section>
