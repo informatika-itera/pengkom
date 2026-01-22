@@ -21,6 +21,7 @@
 
 <body>
     <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><i class="bi bi-moon"></i></button>
+    <div id="toast" class="toast" style="display: none; position: fixed; top: 20px; right: 20px; background: #333; color: white; padding: 15px; border-radius: 5px; z-index: 1000;">Waktu pengerjaan quiz telah habis!</div>
     <div class="reveal">
         <!-- Persistent Footer -->
         <div class="footer-branding">
@@ -64,7 +65,7 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 3: MATERI QUIZ === -->
+            <!-- === SLIDE 5: MATERI QUIZ === -->
             <section>
                 <h3>Cakupan Materi</h3>
                 <div class="text-small text-left" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -101,7 +102,7 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 4: ATURAN QUIZ === -->
+            <!-- === SLIDE 3: ATURAN QUIZ === -->
             <section>
                 <h3>Aturan Quiz <i class="bi bi-exclamation-triangle"></i></h3>
                 <div class="card text-left" style="background: #fff8e1; border-left: 5px solid #ffc107;">
@@ -114,7 +115,7 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 5: CONTOH SOAL 1 === -->
+            <!-- === SLIDE 6: CONTOH SOAL 1 === -->
             <section>
                 <h3>Contoh Soal: Pilihan Ganda</h3>
                 <div class="card text-left">
@@ -135,7 +136,7 @@ print(x % y)
                 </div>
             </section>
 
-            <!-- === SLIDE 6: CONTOH SOAL 2 === -->
+            <!-- === SLIDE 7: CONTOH SOAL 2 === -->
             <section>
                 <h3>Contoh Soal: Benar/Salah</h3>
                 <table class="text-small">
@@ -162,7 +163,7 @@ print(x % y)
                 </table>
             </section>
 
-            <!-- === SLIDE 7: CONTOH SOAL 3 === -->
+            <!-- === SLIDE 8: CONTOH SOAL 3 === -->
             <section>
                 <h3>Contoh Soal: Coding</h3>
                 <div class="flex-container">
@@ -183,7 +184,7 @@ else:
                 </div>
             </section>
 
-            <!-- === SLIDE 8: TIPS === -->
+            <!-- === SLIDE 9: TIPS === -->
             <section>
                 <h3>Tips Mengerjakan</h3>
                 <div class="flex-container" style="align-items: flex-start;">
@@ -199,10 +200,10 @@ else:
                 </div>
             </section>
 
-            <!-- === SLIDE 9: SESI REVIEW === -->
+            <!-- === SLIDE 10: SESI REVIEW === -->
             <section>
                 <h3>Rencana Sesi</h3>
-                <div class="card" style="display: flex; justify-content: space-around; text-align: center;">
+                <div class="card card-highlight" style="display: flex; justify-content: space-around; text-align: center;">
                     <div>
                         <h1>30</h1>
                         <p class="text-smaller">Menit Quiz</p>
@@ -218,19 +219,25 @@ else:
                 </div>
             </section>
 
-            <!-- === SLIDE 10: COUNTDOWN === -->
+            <!-- === SLIDE 10: KUIS DIMULAI DALAM... === -->
             <section>
-                <h1>Quiz Dimulai Dalam...</h1>
-                <div style="font-size: 3em; font-weight: bold; color: #d32f2f;">
-                    3... 2... 1...
+                <h3>Siap Mengerjakan Quiz?</h3>
+                <div id="timer" class="timer" style="margin-top: 30px; font-size: 3em; font-weight: bold; color: #e74c3c; text-align: center;">Timer 30:00</div>
+                <div style="margin-top: 50px; text-align: center;">
+                    <button id="startBtn" style="padding: 15px 30px; font-size: 1.2em; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Quiz</button>
                 </div>
-                <h3 style="margin-top: 50px;">GOOD LUCK! <i class="bi bi-star"></i></h3>
+                <div style="margin-top: 30px; text-align: center;">
+                    <p class="text-small">Klik tombol Start untuk memulai timer</p>
+                </div>
             </section>
 
             <!-- === SLIDE 11: CLOSING === -->
             <section>
                 <h1>Terima Kasih</h1>
-                <p>Semoga hasilnya memuaskan!</p>
+                <p>Good Luck untuk Ujian Tengah Semesternya!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
@@ -254,6 +261,45 @@ else:
     <script src="js/emoji-to-icons.js"></script>
     <script src="js/auto-layout.js"></script>
     <script src="js/slide-enhancements.js"></script>
+    <script>
+        // Quiz Timer
+        var timeLeft = 30 * 60; // 30 minutes in seconds
+        var timerElement = document.getElementById('timer');
+        var startBtn = document.getElementById('startBtn');
+        var countdown;
+        
+        startBtn.addEventListener('click', function() {
+            startBtn.disabled = true;
+            startBtn.innerHTML = 'Quiz Dimulai!';
+            startTimer();
+        });
+        
+        function startTimer() {
+            countdown = setInterval(function() {
+                var minutes = Math.floor(timeLeft / 60);
+                var seconds = timeLeft % 60;
+                timerElement.innerHTML = 'Timer ' + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    timerElement.innerHTML = 'Waktu Habis!';
+                    timerElement.style.color = '#e74c3c';
+                    showNotification('Waktu pengerjaan quiz telah habis!');
+                } else {
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+        
+        function showNotification(message) {
+            var toast = document.getElementById('toast');
+            toast.innerHTML = message;
+            toast.style.display = 'block';
+            setTimeout(function() {
+                toast.style.display = 'none';
+            }, 5000); // Hide after 5 seconds
+        }
+    </script>
 </body>
 
 </html>
