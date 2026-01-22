@@ -91,37 +91,71 @@ from nama_library import fungsi_tertentu
                 </div>
             </section>
 
-            <!-- === SLIDE 4: MATH LIBRARY === -->
+            <!-- === SLIDE 4: MATH LIBRARY - DASAR === -->
             <section>
-                <h3>Library: Math</h3>
+                <h3>Library: Math - Fungsi Dasar</h3>
                 <p class="text-small">Fungsi matematika tingkat lanjut.</p>
-                <div class="flex-container">
-                    <div class="flex-col">
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Fungsi Dasar</h4>
                         <pre><code class="python">
 import math
 
-print(math.sqrt(25))    # 5.0
-print(math.pow(2, 3))   # 8.0
-print(math.pi)          # 3.1415...
-print(math.ceil(4.2))   # 5 (Pembulatan ke atas)
-print(math.floor(4.8))  # 4 (Pembulatan ke bawah)
+print(math.sqrt(25))    
+# 5.0 (akar kuadrat)
+print(math.pow(2, 3))   
+# 8.0 (pangkat)
+print(math.pi)          
+# 3.1415... (nilai pi)
                             </code></pre>
                     </div>
-                    <div class="flex-col card">
-                        <h4>Trigonometri</h4>
+                    <div class="card">
+                        <h4>Pembulatan</h4>
                         <pre><code class="python">
-# Input dalam Radian
-print(math.sin(math.pi/2)) # 1.0
+import math
+# jika sudah import math 
+# tidak perlu diulang
 
-# Konversi Sudut
-sudut = math.radians(90)
-print(math.sin(sudut))     # 1.0
+print(math.ceil(4.2))   
+# 5 (pembulatan ke atas)
+print(math.floor(4.8))  
+# 4 (pembulatan ke bawah)
                             </code></pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 5: RANDOM LIBRARY === -->
+            <!-- === SLIDE 5: MATH LIBRARY - TRIGONOMETRI === -->
+            <section>
+                <h3>Library: Math - Trigonometri</h3>
+                <p class="text-small">Fungsi trigonometri dengan input dalam radian.</p>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Trigonometri</h4>
+                        <pre><code class="python">
+# Input dalam Radian
+print(math.sin(math.pi/2)) 
+# 1.0
+print(math.cos(0))         
+# 1.0
+                            </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Konversi Sudut</h4>
+                        <pre><code class="python">
+sudut = math.radians(90)
+print(math.sin(sudut))     
+# 1.0
+
+sudut = math.degrees(math.pi/2)
+print(sudut)               
+# 90.0
+                            </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 7: RANDOM LIBRARY === -->
             <section>
                 <h3>Library: Random</h3>
                 <p class="text-small">Untuk membuat simulasi atau pengacakan.</p>
@@ -141,18 +175,21 @@ buah = ["Apel", "Jeruk", "Mangga"]
 print(random.choice(buah))
                             </code></pre>
                     </div>
-                    <div class="flex-col card">
+                    <div class="flex-col card card-warning">
                         <p class="text-smaller">Gunakan <code>random.seed()</code> jika ingin hasil acak yang konsisten
                             (reproducible).</p>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 6: PANDAS INTRO === -->
+            <!-- === SLIDE 8: PANDAS INTRO === -->
             <section>
                 <h3>Intro to Pandas <i class="bi bi-bug"></i></h3>
                 <p class="text-small">Library paling populer untuk Analisis Data.</p>
-                <pre><code class="python" data-trim>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Kode Python</h4>
+                        <pre><code class="python" data-trim>
 import pandas as pd
 
 # Membuat DataFrame (Tabel)
@@ -164,16 +201,51 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
-                    </code></pre>
-                <div class="code-output text-smaller">
-                    Nama Usia Kota
-                    0 Budi 20 Lampung
-                    1 Siti 19 Jakarta
-                    2 Andi 21 Bandung
+                            </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Output Terminal</h4>
+                        <div class="text-small" style="margin: 10px 0;">
+                            <pre style="margin: 0; padding: 8px; background: #2d3748; color: #e2e8f0; border-radius: 4px; font-family: 'Courier New', monospace; line-height: 1.4;">
+   Nama  Usia     Kota
+0  Budi    20  Lampung
+1  Siti    19  Jakarta
+2  Andi    21  Bandung</pre>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 7: LATIHAN HANDS-ON === -->
+            <!-- === SLIDE 9: PANDAS - DATAFRAME === -->
+            <section>
+                <h3>Pandas - DataFrame</h3>
+                <p class="text-small">Struktur data tabular seperti Excel.</p>
+                <div class="card text-left" style="max-width: 600px; margin: 0 auto;">
+                    <p class="text-small">
+                        <strong>DataFrame</strong> adalah struktur data tabular dengan baris dan kolom untuk analisis data.
+                    </p>
+                    <div class="grid-2" style="margin-top: 20px;">
+                        <div>
+                            <h4 style="margin-bottom: 10px;">Ciri-ciri:</h4>
+                            <ul class="text-smaller">
+                                <li>Index otomatis dari 0</li>
+                                <li>Kolom sesuai dengan nama yang diberikan</li>
+                                <li>Bisa berbagai tipe data</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 10px;">Keunggulan:</h4>
+                            <ul class="text-smaller">
+                                <li>Mudah dibaca manusia</li>
+                                <li>Powerful untuk manipulasi data</li>
+                                <li>Banyak method built-in</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: LATIHAN HANDS-ON === -->
             <section>
                 <h3>Hands-On Practice</h3>
                 <div class="flex-container" style="align-items: flex-start;">
@@ -190,48 +262,68 @@ print(df)
                 </div>
             </section>
 
-            <!-- === SLIDE 8: RINGKASAN === -->
+            <!-- === SLIDE 12: RINGKASAN === -->
             <section>
                 <h3>Ringkasan Hari Ini</h3>
-                <table class="text-small">
-                    <tr>
-                        <td><code>import</code></td>
-                        <td>Memanggil library.</td>
-                    </tr>
-                    <tr>
-                        <td><code>math</code></td>
-                        <td>Fungsi matematika (sqrt, pow, sin, cos).</td>
-                    </tr>
-                    <tr>
-                        <td><code>random</code></td>
-                        <td>Angka acak (randint, choice).</td>
-                    </tr>
-                    <tr>
-                        <td><code>pandas</code></td>
-                        <td>Menenangani data tabular (row & column).</td>
-                    </tr>
-                </table>
+                <ul class="text-small">
+                    <li><i class="bi bi-check-circle"></i> <strong>import</strong>: Memanggil library ke dalam program.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>math</strong>: Fungsi matematika (sqrt, pow, sin, cos).</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>random</strong>: Angka acak (randint, choice).</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>pandas</strong>: Menangani data tabular (DataFrame).</li>
+                </ul>
             </section>
 
-            <!-- === SLIDE 9: TUGAS === -->
+            <!-- === SLIDE 13: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 11 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
-                    <ul class="text-small">
-                        <li><strong>1. Simulasi Dadu:</strong>
+                    <ol class="text-small">
+                        <li><strong>Simulasi Dadu:</strong>
                             <br>Lempar dadu 100x. Hitung berapa kali muncul angka 6.
                         </li>
-                        <li><strong>2. Kalkulator Hipotenusa:</strong>
-                            <br>Input alas dan tinggi segitiga siku-siku. Hitung sisi miring (c).
-                            <br><code>c = math.sqrt(a**2 + b**2)</code>
+                        <li><strong>Analisis Data Mahasiswa:</strong>
+                            <br>Buat DataFrame dengan data mahasiswa (nama, NIM, nilai). Hitung rata-rata nilai dan tampilkan mahasiswa dengan nilai tertinggi.
                         </li>
-                    </ul>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas11_NIM_Nama.py</code></p>
+                    </ol>
                 </div>
             </section>
 
-            <!-- === SLIDE 10: NEXT WEEK === -->
+            <!-- === SLIDE 14: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman penggunaan library:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Import & Implementasi:</strong> Import library yang diperlukan dan tulis kode dengan komentar jelas.</li>
+                        <li><strong>DataFrame Operations:</strong> Pahami struktur DataFrame dan method pandas untuk tugas kedua.</li>
+                        <li><strong>Testing:</strong> Jalankan kode dengan berbagai input untuk memastikan hasil benar.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan logika dan hasil di komentar kode.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 15: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas11_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di kode.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 16: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>Data Visualization <i class="bi bi-bar-chart"></i></h4>
@@ -243,10 +335,13 @@ print(df)
                 </div>
             </section>
 
-            <!-- === SLIDE 11: Q&A === -->
+            <!-- === SLIDE 17: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>

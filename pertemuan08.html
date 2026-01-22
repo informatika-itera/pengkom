@@ -16,7 +16,7 @@
 
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -45,16 +45,22 @@
             <!-- === SLIDE 2: INFORMASI UTS === -->
             <section>
                 <h3>Informasi UTS</h3>
+                <div class="card card-info text-left" style="margin-bottom: 20px;">
+                    <h4><i class="bi bi-pc-display"></i> Computer Based Test (CBT)</h4>
+                    <ul class="text-small">
+                        <li><strong>Platform:</strong> <code>kuliah2.itera.ac.id</code></li>
+                        <li><strong>Login:</strong> Gunakan akun Google student ITERA</li>
+                        <li><strong>Waktu:</strong> 60 Menit (1 Jam)</li>
+                        <li><strong>Sifat Ujian:</strong> Tutup Buku (Closed Book)</li>
+                        <li><strong>Persiapan:</strong> Pastikan koneksi internet stabil</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 3: STRUKTUR SOAL === -->
+            <section>
+                <h3>Struktur Soal UTS</h3>
                 <div class="flex-container">
-                    <div class="flex-col text-left">
-                        <div class="card card-info">
-                            <ul class="text-small">
-                                <li><strong>Waktu:</strong> 100 Menit (1 Jam 40 Menit)</li>
-                                <li><strong>Sifat Ujian:</strong> Tutup Buku (Closed Book)</li>
-                                <li><strong>Alat:</strong> Laptop Wajib (Isi Baterai Penuh!)</li>
-                            </ul>
-                        </div>
-                    </div>
                     <div class="flex-col">
                         <table class="text-smaller">
                             <thead>
@@ -67,22 +73,22 @@
                             <tbody>
                                 <tr>
                                     <td>Pilihan Ganda</td>
-                                    <td>30</td>
-                                    <td>30%</td>
+                                    <td>35</td>
+                                    <td>50%</td>
                                 </tr>
                                 <tr>
                                     <td>Benar/Salah</td>
-                                    <td>10</td>
-                                    <td>10%</td>
+                                    <td>15</td>
+                                    <td>20%</td>
                                 </tr>
                                 <tr>
-                                    <td>Coding</td>
-                                    <td>3</td>
-                                    <td>60%</td>
+                                    <td>Isian Singkat</td>
+                                    <td>10</td>
+                                    <td>30%</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Total</strong></td>
-                                    <td><strong>43</strong></td>
+                                    <td><strong>60</strong></td>
                                     <td><strong>100%</strong></td>
                                 </tr>
                             </tbody>
@@ -91,7 +97,7 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 3: MATERI UTS === -->
+            <!-- === SLIDE 4: MATERI UTS === -->
             <section>
                 <h3>Cakupan Materi UTS</h3>
                 <p class="text-smaller">Materi Komprehensif dari Pertemuan 1 sampai 6.</p>
@@ -112,24 +118,109 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 4: CONTOH SOAL CODING === -->
+            <!-- === SLIDE 5: KISI-KISI PILIHAN GANDA === -->
             <section>
-                <h3>Contoh Soal Coding UTS</h3>
-                <div class="card text-left text-smaller">
-                    <h4>1. Kalkulator Sederhana (20 Poin)</h4>
-                    <p>Buat program yang menerima 2 angka dan 1 operator, lalu tampilkan hasilnya.</p>
-                </div>
-                <div class="card text-left text-smaller" style="margin-top: 10px;">
-                    <h4>2. Statistik Data (20 Poin)</h4>
-                    <p>Diberikan list angka, cari rata-rata dan nilai terbesarnya.</p>
-                </div>
-                <div class="card text-left text-smaller" style="margin-top: 10px;">
-                    <h4>3. Pola Bintang (20 Poin)</h4>
-                    <p>Print segitiga bintang setinggi N baris menggunakan Loop.</p>
+                <h3>Kisi-Kisi CBT: Pilihan Ganda</h3>
+                <div class="card text-left">
+                    <h4>Pilihan Ganda (35 Soal)</h4>
+                    <ul class="text-smaller">
+                        <li>Konsep dasar programming (6 soal)</li>
+                        <li>Variabel dan tipe data (6 soal)</li>
+                        <li>Operator aritmatika & logika (6 soal)</li>
+                        <li>Percabangan (If-Else) (6 soal)</li>
+                        <li>Perulangan (For/While) (6 soal)</li>
+                        <li>List dan operasinya (5 soal)</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- === SLIDE 5: KETENTUAN === -->
+            <!-- === SLIDE 6: KISI-KISI BENAR/SALAH === -->
+            <section>
+                <h3>Kisi-Kisi CBT: Benar/Salah</h3>
+                <div class="card text-left">
+                    <h4>Benar/Salah (15 Soal)</h4>
+                    <ul class="text-smaller">
+                        <li>Syntax dasar Python (5 soal)</li>
+                        <li>Konsep variabel dan tipe data (3 soal)</li>
+                        <li>Operator dan ekspresi (3 soal)</li>
+                        <li>Struktur kontrol (If-Else) (2 soal)</li>
+                        <li>Loop dan iterasi (2 soal)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 7: KISI-KISI ISIAN SINGKAT === -->
+            <section>
+                <h3>Kisi-Kisi CBT: Isian Singkat</h3>
+                <div class="card text-left">
+                    <h4>Isian Singkat (10 Soal)</h4>
+                    <ul class="text-smaller">
+                        <li>Output program Python sederhana (4 soal)</li>
+                        <li>Syntax dan struktur kode (3 soal)</li>
+                        <li>Debugging error sederhana (3 soal)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: CONTOH SOAL - OUTPUT PROGRAM === -->
+            <section>
+                <h3>Contoh Soal Isian Singkat: Output Program</h3>
+                <div class="grid-2">
+                    <div class="card text-left">
+                        <h4>Soal 1</h4>
+                        <p class="text-smaller">Apa output dari kode berikut?</p>
+                        <pre><code class="language-python">x = 5
+y = 3
+print(x + y)</code></pre>
+                        <p class="text-smaller"><strong>Jawaban:</strong> 8</p>
+                    </div>
+                    <div class="card text-left">
+                        <h4>Soal 2</h4>
+                        <p class="text-smaller">Apa output dari kode berikut?</p>
+                        <pre><code class="language-python">numbers = [1, 2, 3, 4, 5]
+print(numbers[2])</code></pre>
+                        <p class="text-smaller"><strong>Jawaban:</strong> 3</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 9: CONTOH SOAL - SYNTAX & STRUKTUR === -->
+            <section>
+                <h3>Contoh Soal Isian Singkat: Syntax & Struktur Kode</h3>
+                <div class="grid-2">
+                    <div class="card text-left">
+                        <h4>Soal 1</h4>
+                        <p class="text-smaller">Lengkapi struktur if-else yang benar:</p>
+                        <pre><code class="language-python">___ x > 10:
+    print("Besar")
+___:
+    print("Kecil")</code></pre>
+                        <p class="text-smaller"><strong>Jawaban:</strong> if, else</p>
+                    </div>
+                    <div class="card text-left">
+                        <h4>Soal 2</h4>
+                        <p class="text-smaller">Lengkapi struktur for loop yang benar:</p>
+                        <pre><code class="language-python">___ i ___ range(3):
+    print(i)</code></pre>
+                        <p class="text-smaller"><strong>Jawaban:</strong> for, in</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 10: CONTOH SOAL - DEBUGGING === -->
+            <section>
+                <h3>Contoh Soal Isian Singkat: Debugging Error</h3>
+                <div class="card text-left">
+                    <h4>Soal 1</h4>
+                    <p class="text-smaller">Perbaiki syntax error pada kode berikut:</p>
+                    <pre><code class="language-python">if x > 5
+    print("Besar")</code></pre>
+                    <p class="text-smaller"><strong>Jawaban:</strong> if x > 5:</p>
+                    <p class="text-smaller"><strong>Keterangan:</strong> Seharusnya ada tanda titik dua (:) setelah kondisi if</p>
+                </div>
+            </section>
+
+            <!-- === SLIDE 11: KETENTUAN === -->
             <section>
                 <h3>Ketentuan & Tata Tertib</h3>
                 <div class="card" style="border-left: 5px solid #d32f2f;">
@@ -142,26 +233,38 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 6: TIPS === -->
+            <!-- === SLIDE 12: TIPS === -->
             <section>
                 <h3>Tips Sukses UTS</h3>
                 <div class="flex-container">
-                    <div class="flex-col card">
-                        <h4>Latihan Coding</h4>
-                        <p class="text-smaller">Tangan harus terbiasa mengetik syntax, bukan hanya menghafal.</p>
+                    <div class="flex-col card text-center card-success">
+                        <h4><i class="bi bi-wifi"></i><br>Teknis</h4>
+                        <ul class="text-smaller text-left">
+                            <li>Koneksi internet stabil</li>
+                            <li>NIM & password LMS siap</li>
+                            <li>Latihan syntax Python</li>
+                        </ul>
                     </div>
-                    <div class="flex-col card">
-                        <h4>Review Slide</h4>
-                        <p class="text-smaller">Baca kembali slide pertemuan 1-6.</p>
+                    <div class="flex-col card text-center card-info">
+                        <h4><i class="bi bi-book"></i><br>Materi</h4>
+                        <ul class="text-smaller text-left">
+                            <li>Review slide 1-7</li>
+                            <li>Fokus konsep dasar</li>
+                            <li>Praktik isian singkat</li>
+                        </ul>
                     </div>
-                    <div class="flex-col card">
-                        <h4>Istirahat</h4>
-                        <p class="text-smaller">Jangan begadang malam sebelum ujian.</p>
+                    <div class="flex-col card text-center card-danger">
+                        <h4><i class="bi bi-moon"></i><br>Mental</h4>
+                        <ul class="text-smaller text-left">
+                            <li>Istirahat cukup</li>
+                            <li>Tenang & fokus</li>
+                            <li>CBT = pemahaman konsep</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 7: AFTER UTS === -->
+            <!-- === SLIDE 13: AFTER UTS === -->
             <section>
                 <h3>Perjalanan Selanjutnya...</h3>
                 <p class="text-small">Setelah UTS, kita akan mempelajari materi yang lebih seru!</p>
@@ -170,13 +273,14 @@
                     <li>Pertemuan 10: String Manipulation</li>
                     <li>Pertemuan 11: Libraries (Pandas, Math)</li>
                     <li>Pertemuan 12: Visualisasi Data</li>
+                    <li>Pertemuan 13: File Eksternal</li>
                     <li>Pertemuan 14: Final Project</li>
                 </ul>
             </section>
 
-            <!-- === SLIDE 8: CLOSING === -->
+            <!-- === SLIDE 14: CLOSING === -->
             <section>
-                <h1>Selamat Mengerjakan UTS</h1>
+                <h1>Selamat Menempuh UTS</h1>
                 <h3 style="color: #2e7d32;">SEMANGAT! KITA BISA! <i class="bi bi-hand-thumbs-up"></i></h3>
                 <p style="margin-top: 50px; font-size: 0.8em; font-style: italic;">"Kejujuran adalah modal utama
                     kesuksesan."</p>

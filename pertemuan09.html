@@ -99,7 +99,7 @@
                         <div style="text-align: left; font-size: 0.7em; padding: 10px;">
                             <p><strong>Input:</strong> Uang + Kode Produk</p>
                             <hr>
-                            <p style="text-align: center;"><strong>PROSES (Black Box)</strong></p>
+                            <p style="text-align: center;"><strong>PROSES (Fungsi)</strong></p>
                             <hr>
                             <p><strong>Output:</strong> Minuman</p>
                         </div>
@@ -107,60 +107,133 @@
                 </div>
             </section>
 
-            <!-- === SLIDE 5: DEFINISI FUNGSI === -->
+            <!-- === SLIDE 5: APA ITU FUNGSI === -->
             <section>
-                <h3>Mendefinisikan Fungsi</h3>
+                <h3>Keuntungan Fungsi</h3>
+                <div class="grid-2">
+                    <div class="card text-center">
+                        <h4><i class="bi bi-recycle"></i><br>Reusable</h4>
+                        <p class="text-smaller">Kode dapat dipanggil berkali-kali tanpa perlu menulis ulang</p>
+                    </div>
+                    <div class="card text-center">
+                        <h4><i class="bi bi-diagram-3"></i><br>Modular</h4>
+                        <p class="text-smaller">Program terbagi menjadi bagian-bagian kecil yang terorganisir</p>
+                    </div>
+                </div>
+                <div class="grid-2" style="margin-top: 15px;">
+                    <div class="card text-center">
+                        <h4><i class="bi bi-tools"></i><br>Maintainable</h4>
+                        <p class="text-smaller">Mudah diperbaiki dan dikembangkan</p>
+                    </div>
+                    <div class="card text-center">
+                        <h4><i class="bi bi-share"></i><br>Shareable</h4>
+                        <p class="text-smaller">Dapat digunakan di program lain</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 6: CARA MENDEFINISIKAN === -->
+            <section>
+                <h3>Cara Mendefinisikan Fungsi</h3>
                 <div class="flex-container">
                     <div class="flex-col">
+                        <h4>Syntax Dasar</h4>
                         <pre><code class="python" data-trim>
 def nama_fungsi(parameter):
     # Blok kode perintah
     # ...
     return hasil  # Opsional
                             </code></pre>
+                        <ul class="text-smaller">
+                            <li><code>def</code> = keyword untuk mendefinisikan fungsi</li>
+                            <li><code>nama_fungsi</code> = identifier unik</li>
+                            <li><code>parameter</code> = input (opsional)</li>
+                            <li><code>return</code> = output (opsional)</li>
+                        </ul>
                     </div>
-                    <div class="flex-col card">
-                        <h4>Contoh Sederhana</h4>
-                        <pre><code class="python">
-def sapa_dunia():
-    print("Halo Dunia!")
-
-# Memanggil (Call)
-sapa_dunia()
-# Output: Halo Dunia!
-                             </code></pre>
+                    <div class="flex-col card text-center">
+                        <h4>Langkah-langkah</h4>
+                        <ol class="text-smaller text-left">
+                            <li>Tulis keyword <code>def</code></li>
+                            <li>Beri nama fungsi</li>
+                            <li>Tentukan parameter (jika ada)</li>
+                            <li>Tulis blok kode dengan indentasi</li>
+                            <li>Gunakan <code>return</code> jika perlu</li>
+                        </ol>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 6: PARAMETER === -->
+            <!-- === SLIDE 7: CONTOH FUNGSI === -->
+            <section>
+                <h3>Contoh Fungsi Sederhana</h3>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Fungsi Tanpa Parameter</h4>
+                        <pre><code class="python">
+def sapa_dunia():
+    print("Halo Dunia!")
+
+# Memanggil fungsi
+sapa_dunia()
+# Output: Halo Dunia!
+                        </code></pre>
+                        <p class="text-smaller">Fungsi ini tidak menerima input dan tidak mengembalikan nilai.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fungsi Dengan Return</h4>
+                        <pre><code class="python">
+def kuadrat(x):
+    return x * x
+
+# Memanggil dan menggunakan hasil
+hasil = kuadrat(5)
+print(hasil)  # Output: 25
+                        </code></pre>
+                        <p class="text-smaller">Fungsi ini menerima parameter dan mengembalikan nilai.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 8: PARAMETER === -->
             <section>
                 <h3>Parameter & Argumen</h3>
-                <p class="text-small">Kita bisa mengirim data ke dalam fungsi.</p>
-                <pre><code class="python" data-trim>
+                <p class="text-small">Parameter adalah variabel yang didefinisikan dalam fungsi untuk menerima data.</p>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Satu parameter</h4>
+                        <pre><code class="python" data-trim>
 def sapa_nama(nama):
     print(f"Halo, {nama}!")
 
 sapa_nama("Budi")   # Halo, Budi!
 sapa_nama("Siti")   # Halo, Siti!
-                    </code></pre>
-
-                <p class="text-small" style="margin-top: 20px;">Fungsi Penjumlahan:</p>
-                <pre><code class="python" data-trim>
+                        </code></pre>
+                    </div>
+                    <div class="card">
+                        <h4>Dua parameter</h4>
+                        <pre><code class="python" data-trim>
 def tambah(a, b):
-    print(f"Hasil {a} + {b} = {a + b}")
+    print(f"Hasil: {a + b}")
 
-tambah(5, 3)  # Hasil 5 + 3 = 8
-                    </code></pre>
+tambah(5, 3)  # Hasil: 8
+                        </code></pre>
+                    </div>
+                </div>
+
+                <div class="card text-left card-warning" style="margin-top: 20px; margin-bottom: 20px;">
+                    <p class="text-smaller"><strong>Catatan:</strong> Gunakan <code>f"teks {variabel}"</code> untuk menyisipkan variabel ke string.</p>
+                </div>
             </section>
 
-            <!-- === SLIDE 7: RETURN VALUE === -->
+            <!-- === SLIDE 9: RETURN VALUE === -->
             <section>
                 <h3>Return Value</h3>
                 <div class="flex-container">
                     <div class="flex-col text-left text-small">
-                        <p><strong>print()</strong> hanya menampilkan ke layar.</p>
-                        <p><strong>return</strong> mengembalikan nilai ke pemanggil, sehingga bisa disimpan dalam
+                        <p><strong><code>print()</code></strong> hanya menampilkan ke layar.</p>
+                        <p><strong><code>return</code></strong> mengembalikan nilai ke pemanggil, sehingga bisa disimpan dalam
                             variabel atau diolah lagi.</p>
                     </div>
                     <div class="flex-col">
@@ -176,7 +249,7 @@ print(hasil + 10)
                 </div>
             </section>
 
-            <!-- === SLIDE 8: SCOPE === -->
+            <!-- === SLIDE 10: SCOPE === -->
             <section>
                 <h3>Scope Variabel (Cakupan)</h3>
                 <div class="flex-container">
@@ -187,7 +260,7 @@ print(hasil + 10)
 x = 10  # Global
 
 def cek():
-    print(x) # Bisa
+    print(x) # Bisa!
                             </code></pre>
                     </div>
                     <div class="flex-col card">
@@ -198,75 +271,113 @@ def hitung():
     y = 5  # Local
     print(y)
 
-hitung()
-print(y) # ERROR!
+hitung() # tercetak 5
+print(y) # tapi ini ERROR!
                             </code></pre>
                     </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 9: LATIHAN === -->
+            <!-- === SLIDE 11: LATIHAN 1 === -->
             <section>
-                <h3>Latihan: Fungsi Geometri</h3>
-                <div class="card text-left">
-                    <p class="text-small">Buatlah fungsi-fungsi berikut:</p>
-                    <ol class="text-small">
-                        <li><code>luas_persegi(sisi)</code> &rarr; mengembalikan luas.</li>
-                        <li><code>luas_segitiga(alas, tinggi)</code> &rarr; mengembalikan luas.</li>
-                    </ol>
-                    <hr>
-                    <pre><code class="python">
-def luas_persegi(sisi):
-    return sisi * sisi
-
-print(luas_persegi(4))  # 16
-                        </code></pre>
+                <h3>Latihan Hands-On 1</h3>
+                <div class="flex-container">
+                    <div class="flex-col card">
+                        <h4>1. Fungsi Kalkulator</h4>
+                        <p class="text-smaller">Buat fungsi <code>kalkulator(a, b, operasi)</code> yang menerima dua angka dan operasi (+, -, *, /).</p>
+                        <p class="text-smaller">Return hasil perhitungan sesuai operasi.</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>2. Fungsi Scope</h4>
+                        <p class="text-smaller">Buat fungsi <code>counter()</code> yang menggunakan variabel global sebagai counter.</p>
+                        <p class="text-smaller">Setiap kali dipanggil, increment counter dan return nilai terbaru.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- === SLIDE 10: RINGKASAN === -->
+            <!-- === SLIDE 12: LATIHAN 2 === -->
             <section>
-                <h3>Ringkasan Hari Ini</h3>
-                <table class="text-small">
-                    <tr>
-                        <td><strong>def</strong></td>
-                        <td>Keyword untuk membuat fungsi.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Parameter</strong></td>
-                        <td>Variabel input di definisi fungsi.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Return</strong></td>
-                        <td>Mengembalikan hasil proses.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Scope</strong></td>
-                        <td>Wilayah hidup variabel (Local vs Global).</td>
-                    </tr>
-                </table>
+                <h3>Latihan Hands-On 2</h3>
+                <div class="flex-container">
+                    <div class="flex-col card">
+                        <h4>3. Fungsi Konversi</h4>
+                        <p class="text-smaller">Buat fungsi <code>celsius_to_fahrenheit(celsius)</code> yang mengkonversi suhu dari Celsius ke Fahrenheit.</p>
+                        <p class="text-smaller">Rumus: F = (C × 9/5) + 32</p>
+                    </div>
+                    <div class="flex-col card">
+                        <h4>4. Fungsi Statistika</h4>
+                        <p class="text-smaller">Buat fungsi <code>hitung_rata_rata(angka_list)</code> yang menghitung rata-rata dari list angka.</p>
+                        <p class="text-smaller">Gunakan loop untuk menjumlahkan semua elemen.</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- === SLIDE 11: TUGAS === -->
+            <!-- === SLIDE 13: RINGKASAN === -->
+            <section>
+                <h3>Ringkasan Hari Ini</h3>
+                <ul class="text-small">
+                    <li><i class="bi bi-check-circle"></i> <strong>def</strong>: Keyword untuk membuat fungsi.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Parameter</strong>: Variabel input di definisi fungsi.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Return</strong>: Mengembalikan hasil proses.</li>
+                    <li><i class="bi bi-check-circle"></i> <strong>Scope</strong>: Wilayah hidup variabel (Local vs Global).</li>
+                </ul>
+            </section>
+
+            <!-- === SLIDE 14: TUGAS UTAMA === -->
             <section>
                 <h3>Tugas Pertemuan 9 <i class="bi bi-list-check"></i></h3>
                 <div class="card card-warning text-left">
-                    <ul class="text-small">
-                        <li><strong>1. Konversi Suhu (Functions):</strong>
+                    <ol class="text-small">
+                        <li><strong>Konversi Suhu (Functions):</strong>
                             <br>Buat fungsi <code>c_to_f(c)</code>, <code>f_to_c(f)</code>, dll. User memilih menu
                             konversi.
                         </li>
-                        <li><strong>2. Kalkulator BMI Modular:</strong>
+                        <li><strong>Kalkulator BMI Modular:</strong>
                             <br>Pecah tugas BMI minggu lalu menjadi fungsi: <code>hitung_bmi(b, t)</code> dan
                             <code>get_kategori(bmi)</code>.
                         </li>
-                    </ul>
-                    <hr>
-                    <p class="text-smaller"><strong>File:</strong> <code>Tugas9_NIM_Nama.py</code></p>
+                    </ol>
                 </div>
             </section>
 
-            <!-- === SLIDE 12: NEXT WEEK === -->
+            <!-- === SLIDE 15: PANDUAN PENGERJAAN === -->
+            <section>
+                <h3>Panduan Pengerjaan Tugas</h3>
+                <div class="card card-info text-left">
+                    <p class="text-small">Untuk memastikan pemahaman fungsi dan modularitas, ikuti langkah-langkah berikut:</p>
+                    <ul class="text-smaller">
+                        <li><strong>Analisis Fungsi:</strong> Tentukan parameter, return value, dan scope yang tepat.</li>
+                        <li><strong>Desain Modular:</strong> Buat pseudocode dengan fungsi terpisah untuk setiap tugas.</li>
+                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas, gunakan def, parameter, dan return.</li>
+                        <li><strong>Testing:</strong> Jalankan dengan berbagai input untuk memastikan fungsi bekerja benar.</li>
+                        <li><strong>Refleksi:</strong> Tambahkan komentar untuk refleksi penggunaan fungsi dan modularitas.</li>
+                        <li><strong>Dokumentasi:</strong> Jelaskan logika fungsi dan hasil di komentar kode.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- === SLIDE 16: PENGUMPULAN TUGAS === -->
+            <section>
+                <h3>Pengumpulan Tugas</h3>
+                <div class="card card-warning text-left">
+                    <div class="flex-container" style="align-items: center;">
+                        <div class="flex-col text-left">
+                            <p class="text-smaller"><strong>Instruksi:</strong></p>
+                            <ul class="text-smaller">
+                                <li>Simpan file: <code>Tugas9_NIM_Nama.ipynb</code></li>
+                                <li>Sertakan komentar dan output contoh di kode.</li>
+                                <li>Upload ke LMS sebelum deadline.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col text-center">
+                            <div style="font-size: 3em;"><i class="bi bi-exclamation-triangle"></i></div>
+                            <p class="text-smaller"><strong>Deadline:</strong><br>H-1 Pertemuan Berikutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 17: NEXT WEEK === -->
             <section>
                 <h3>Pertemuan Berikutnya</h3>
                 <h4>Manipulasi String <i class="bi bi-fonts"></i></h4>
@@ -278,10 +389,13 @@ print(teks.replace("a", "o")) # "Holo Dunio"
                     </code></pre>
             </section>
 
-            <!-- === SLIDE 13: Q&A === -->
+            <!-- === SLIDE 18: Q&A === -->
             <section>
                 <h1>Q & A</h1>
                 <p>Terima Kasih!</p>
+                <div class="text-smaller" style="margin-top: 50px; color: #666;">
+                    Sampai jumpa! <i class="bi bi-hand-wave"></i>
+                </div>
             </section>
 
         </div>
