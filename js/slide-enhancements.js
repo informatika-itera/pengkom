@@ -128,5 +128,16 @@
     addHeadingIcons();
     normalizeImages();
     // insertQrSlide();
+    handleAutoPrint();
   });
+
+  const handleAutoPrint = () => {
+    if (window.location.search.includes("print-pdf")) {
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          window.print();
+        }, 1000);
+      });
+    }
+  };
 })();

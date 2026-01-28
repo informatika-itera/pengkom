@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi Ajar Pengenalan Komputasi - ITERA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,6 +68,24 @@
             font-size: 11px;
             margin-top: 3px;
         }
+        .meeting-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-download {
+            color: #dc3545; /* Red for PDF */
+            font-size: 1.2em;
+            margin-left: 5px;
+            padding: 2px 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .btn-download:hover {
+            color: #bd2130;
+            background-color: #f8d7da;
+            text-decoration: none;
+        }
         .additional {
             text-align: center;
             margin-top: 15px;
@@ -83,74 +102,122 @@
     <h1>Materi Ajar Pengenalan Komputasi</h1>
     <div class="logos">
         <img src="logo/logo_itera.png" alt="Logo ITERA">
-        <img src="logo/logo_kampus_merdeka.png" alt="Logo Kampus Merdeka">
+        <img src="logo/logo_kampus_berdampak.png" alt="Logo Kampus Merdeka">
     </div>
     <p class="subtitle">Institut Teknologi Sumatera (ITERA) | Kode Matakuliah: WI25-00003</p>
     
     <h2>Slide Presentasi per Pertemuan</h2>
     <ul class="meeting-list">
         <li>
-            <a href="pertemuan01.html">🧠 Pertemuan 1: Computational Thinking</a>
+            <div class="meeting-header">
+                <a href="pertemuan01.html">🧠 Pertemuan 1: Computational Thinking</a>
+                <a href="pertemuan01.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Pengantar, 4 Pilar CT, Python Intro</div>
         </li>
         <li>
-            <a href="pertemuan02.html">📦 Pertemuan 2: Variabel dan Tipe Data</a>
+            <div class="meeting-header">
+                <a href="pertemuan02.html">📦 Pertemuan 2: Variabel dan Tipe Data</a>
+                <a href="pertemuan02.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Menyimpan Informasi, Tipe Data Dasar</div>
         </li>
         <li>
-            <a href="pertemuan03.html">🔀 Pertemuan 3: Logika Percabangan (If/Else)</a>
+            <div class="meeting-header">
+                <a href="pertemuan03.html">🔀 Pertemuan 3: Logika Percabangan (If/Else)</a>
+                <a href="pertemuan03.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Decision Making, Comparison Operators</div>
         </li>
         <li>
-            <a href="pertemuan04.html">⚖️ Pertemuan 4: Logika Lanjutan (Elif, AND/OR/NOT)</a>
+            <div class="meeting-header">
+                <a href="pertemuan04.html">⚖️ Pertemuan 4: Logika Lanjutan (Elif, AND/OR/NOT)</a>
+                <a href="pertemuan04.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Multiple Conditions, Logic Operators</div>
         </li>
         <li>
-            <a href="pertemuan05.html">🔄 Pertemuan 5: Perulangan Dasar (For Loops)</a>
+            <div class="meeting-header">
+                <a href="pertemuan05.html">🔄 Pertemuan 5: Perulangan Dasar (For Loops)</a>
+                <a href="pertemuan05.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Looping, Ranges, Automation</div>
         </li>
         <li>
-            <a href="pertemuan06.html">📋 Pertemuan 6: Bekerja dengan Data Majemuk (Lists)</a>
+            <div class="meeting-header">
+                <a href="pertemuan06.html">📋 Pertemuan 6: Bekerja dengan Data Majemuk (Lists)</a>
+                <a href="pertemuan06.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Lists, Indexing, Data Structures</div>
         </li>
         <li>
-            <a href="pertemuan07.html">📝 Pertemuan 7: Review dan Kuis Tengah Semester</a>
+            <div class="meeting-header">
+                <a href="pertemuan07.html">📝 Pertemuan 7: Review dan Kuis Tengah Semester</a>
+                <a href="pertemuan07.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Review Modul 1-2, Preparation for UTS</div>
         </li>
         <li>
-            <a href="pertemuan08.html">📊 Pertemuan 8: Ujian Tengah Semester (UTS)</a>
+            <div class="meeting-header">
+                <a href="pertemuan08.html">📊 Pertemuan 8: Ujian Tengah Semester (UTS)</a>
+                <a href="pertemuan08.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Mid-semester Exam</div>
         </li>
         <li>
-            <a href="pertemuan09.html">⚙️ Pertemuan 9: Fungsi (Def Functions)</a>
+            <div class="meeting-header">
+                <a href="pertemuan09.html">⚙️ Pertemuan 9: Fungsi (Def Functions)</a>
+                <a href="pertemuan09.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Functions, Reusability, Parameters</div>
         </li>
         <li>
-            <a href="pertemuan10.html">📝 Pertemuan 10: Manipulasi Teks (Strings)</a>
+            <div class="meeting-header">
+                <a href="pertemuan10.html">📝 Pertemuan 10: Manipulasi Teks (Strings)</a>
+                <a href="pertemuan10.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">String Operations, Text Processing</div>
         </li>
         <li>
-            <a href="pertemuan11.html">📚 Pertemuan 11: Menggunakan Library (Modul Eksternal)</a>
+            <div class="meeting-header">
+                <a href="pertemuan11.html">📚 Pertemuan 11: Menggunakan Library (Modul Eksternal)</a>
+                <a href="pertemuan11.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Imports, External Modules, Libraries</div>
         </li>
         <li>
-            <a href="pertemuan12.html">📈 Pertemuan 12: Pengenalan Visualisasi Data (Matplotlib)</a>
+            <div class="meeting-header">
+                <a href="pertemuan12.html">📈 Pertemuan 12: Pengenalan Visualisasi Data (Matplotlib)</a>
+                <a href="pertemuan12.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Data Visualization, Charts, Graphs</div>
         </li>
         <li>
-            <a href="pertemuan13.html">💾 Pertemuan 13: Bekerja dengan File (Input/Output)</a>
+            <div class="meeting-header">
+                <a href="pertemuan13.html">💾 Pertemuan 13: Bekerja dengan File (Input/Output)</a>
+                <a href="pertemuan13.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">File Handling, Read/Write Operations</div>
         </li>
         <li>
-            <a href="pertemuan14.html">🧩 Pertemuan 14: Strategi Pemecahan Masalah (Desain Algoritma)</a>
+            <div class="meeting-header">
+                <a href="pertemuan14.html">🧩 Pertemuan 14: Strategi Pemecahan Masalah (Desain Algoritma)</a>
+                <a href="pertemuan14.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Problem Solving, Algorithm Design</div>
         </li>
         <li>
-            <a href="pertemuan15.html">🎯 Pertemuan 15: Kuis Akhir dan Finalisasi Proyek</a>
+            <div class="meeting-header">
+                <a href="pertemuan15.html">🎯 Pertemuan 15: Kuis Akhir dan Finalisasi Proyek</a>
+                <a href="pertemuan15.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Final Quiz, Project Finalization</div>
         </li>
         <li>
-            <a href="pertemuan16.html">🎉 Pertemuan 16: Presentasi Proyek Akhir (UAS)</a>
+            <div class="meeting-header">
+                <a href="pertemuan16.html">🎉 Pertemuan 16: Presentasi Proyek Akhir (UAS)</a>
+                <a href="pertemuan16.html?print-pdf" class="btn-download" title="Download PDF" target="_blank"><i class="bi bi-file-earmark-pdf"></i></a>
+            </div>
             <div class="topic">Final Project Presentation</div>
         </li>
     </ul>
