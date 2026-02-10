@@ -99,6 +99,39 @@ html.reveal-print {
 		min-height: auto !important;
 	}
 
+	/* Prevent printing a slide across two PDF pages. Use class `no-break` on slides that must stay on one page. */
+	.reveal .slides section.no-break,
+	.reveal .slides section.no-break * {
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-column-break-inside: avoid !important;
+		-webkit-page-break-inside: avoid !important;
+	}
+
+	/* For print: compact layout for `no-break` slides so both examples fit on one page */
+	.reveal.print .slides section.no-break,
+	.reveal.print .slides section.no-break *,
+	html.reveal-print .slides section.no-break,
+	html.reveal-print .slides section.no-break * {
+		/* reduce code font and margins */
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-column-break-inside: avoid !important;
+		-webkit-page-break-inside: avoid !important;
+	}
+
+	.reveal .slides section.no-break pre code {
+		font-size: 0.7em !important;
+		line-height: 1.05 !important;
+	}
+	.reveal .slides section.no-break .card {
+		padding: 6px 8px !important;
+	}
+	.reveal .slides section.no-break h4 {
+		margin-bottom: 4px !important;
+		font-size: 0.9em !important;
+	}
+
 	.reveal img {
 		box-shadow: none;
 	}

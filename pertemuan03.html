@@ -243,33 +243,24 @@ Output: Lulus!
                 </div>
             </section>
 
-            <!-- === SLIDE 9: PENTING - INDENTASI DI PYTHON === -->
-            <section>
+            <!-- === SLIDE 9: PENTING - INDENTASI DI PYTHON (RINGKAS) === -->
+            <section class="no-break">
                 <h3><i class="bi bi-exclamation-triangle"></i> Penting: Indentasi di Python</h3>
                 <div class="card card-highlight text-left">
-                    <p class="text-small"><strong>Python menggunakan indentasi</strong> (spasi atau tab) untuk menentukan blok kode, bukan kurung kurawal <code>{ }</code> seperti bahasa lain.</p>
-                    <div class="grid-2" style="margin-top: 10px;">
-                        <div class="card">
-                            <h4><i class="bi bi-check-circle" style="color: green;"></i> BENAR</h4>
-                            <pre><code class="python" style="font-size: 0.8em;">
-if kondisi:
-    print("Ini blok IF")
-    print("Baris kedua")
-else:
-    print("Ini blok ELSE")
-                            </code></pre>
+                    <p class="text-small"><strong>Python menentukan blok kode dengan indentasi</strong> (pakai 4 spasi atau tab).</p>
+                    <div class="grid-2" style="margin-top: 8px; gap: 10px;">
+                        <div class="card card-success">
+                            <h4 style="margin-bottom:6px;"><i class="bi bi-check-circle" style="color: green;"></i> BENAR</h4>
+                            <pre><code class="python" style="font-size: 0.75em;">if kondisi:
+    print("OK")</code></pre>
                         </div>
-                        <div class="card">
-                            <h4><i class="bi bi-x-circle" style="color: red;"></i> SALAH</h4>
-                            <pre><code class="python" style="font-size: 0.8em;">
-if kondisi:
-print("Indentasi salah!")  # Error!
-else:
-    print("OK")
-                            </code></pre>
+                        <div class="card card-danger">
+                            <h4 style="margin-bottom:6px;"><i class="bi bi-x-circle" style="color: red;"></i> SALAH</h4>
+                            <pre><code class="python" style="font-size: 0.75em;">if kondisi:
+print("Indentasi salah!")  # Error</code></pre>
                         </div>
                     </div>
-                    <p class="text-smaller" style="margin-top: 10px; color: #666;"><strong>Catatan:</strong> Gunakan 4 spasi atau tab untuk indentasi standar.</p>
+                    <p class="text-smaller" style="margin-top: 8px; color: #666;"><strong>Catatan:</strong> Baris tanpa indent di dalam blok menyebabkan <em>IndentationError</em> — jangan ulangi.</p>
                 </div>
             </section>
 
@@ -281,7 +272,7 @@ else:
                         <h4>Penjelasan & Format</h4>
                         <p class="text-small">Jika kondisi TRUE, jalankan blok IF.<br>Jika FALSE, jalankan blok ELSE.</p>
                         <hr style="margin: 15px 0;">
-                        <h5>Format IF-ELSE:</h5>
+                        <!-- <h5>Format IF-ELSE:</h5> -->
                         <pre><code class="python" style="font-size: 0.9em;">
 if kondisi:
     # blok kode jika kondisi TRUE
@@ -306,24 +297,19 @@ Output: Ganjil
                 </div>
             </section>
 
-            <!-- === SLIDE 11: STRUKTUR IF-ELIF-ELSE === -->
-            <section>
+            <!-- === SLIDE 11: STRUKTUR IF-ELIF-ELSE (RINGKAS) === -->
+            <section class="no-break">
                 <h3>Struktur IF-ELIF-ELSE</h3>
                 <div class="card text-left">
-                    <h4>Penjelasan & Format</h4>
-                    <p class="text-small">Digunakan ketika ada <strong>lebih dari dua kondisi</strong> yang perlu diperiksa secara berurutan.</p>
-                    <hr style="margin: 15px 0;">
-                    <h5>Format IF-ELIF-ELSE:</h5>
-                    <pre><code class="python" style="font-size: 0.9em;">
-if kondisi1:
-    # blok kode jika kondisi1 TRUE
+                    <p class="text-small"><strong>Untuk lebih dari dua kondisi:</strong> periksa berurutan; kondisi pertama yang True dijalankan.</p>
+                    <pre><code class="python" style="font-size: 0.82em; line-height:1.05;">if kondisi1:
+    # aksi jika kondisi1 TRUE
 elif kondisi2:
-    # blok kode jika kondisi2 TRUE tapi kondisi1 FALSE
-elif kondisi3:
-    # blok kode jika kondisi3 TRUE tapi kondisi1 & kondisi2 FALSE
+    # aksi jika kondisi2 TRUE
 else:
-    # blok kode jika semua kondisi FALSE
+    # aksi jika semua kondisi FALSE
                     </code></pre>
+                    <p class="text-smaller" style="margin-top:6px; color:#666;">Tip: Susun dari kondisi yang paling spesifik ke yang paling umum.</p>
                 </div>
             </section>
 
@@ -356,7 +342,7 @@ print(f"Grade: {grade}")
 Grade: B
                         </pre>
                         <div class="card card-highlight text-left" style="margin-top: 20px;">
-                    <p class="text-small"><i class="bi bi-lightbulb"></i> <strong>Pikirkan:</strong> Jika kondisi dibalik (mulai dari <code>if nilai >= 60</code> untuk D, lalu <code>elif >=70</code> untuk C, dst.), apakah hasil sama untuk nilai 85?</p>
+                    <p class="text-smaller"><i class="bi bi-lightbulb"></i> <strong>Pikirkan:</strong> Jika kondisi dibalik (mulai dari <code>if nilai >= 60</code> untuk D, lalu <code>elif >=70</code> untuk C, dst.), apakah hasil sama untuk nilai 85?</p>
                     </div>
                     </div>
                     
@@ -443,7 +429,7 @@ Hasil: 15
             <section>
                 <h3>Ringkasan Hari Ini</h3>
                 <div class="card">
-                    <ul class="text-small" style="columns: 2;">
+                    <ul class="text-small">
                         <li><i class="bi bi-check-circle"></i> <strong>Percabangan</strong>: <code>if</code>, <code>if-else</code>, <code>if-elif-else</code>.</li>
                         <li><i class="bi bi-check-circle"></i> <strong>Operator Perbandingan</strong>: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</li>
                         <li><i class="bi bi-check-circle"></i> <strong>Boolean</strong>: Hasil evaluasi <code>True</code> atau <code>False</code>.</li>
@@ -476,19 +462,16 @@ Hasil: 15
                 </div>
             </section>
 
-            <!-- === SLIDE 18: PANDUAN PENGERJAAN === -->
-            <section>
+            <!-- === SLIDE 18: PANDUAN PENGERJAAN (RINGKAS) === -->
+            <section class="no-break">
                 <h3>Panduan Pengerjaan Tugas</h3>
                 <div class="card card-info text-left">
-                    <p class="text-small">Untuk memastikan pemahaman mendalam tentang percabangan, ikuti langkah-langkah berikut:</p>
-                    <ul class="text-smaller">
-                        <li><strong>Analisis Kondisi:</strong> Identifikasi kondisi yang perlu diperiksa dan hasil yang diharapkan.</li>
-                        <li><strong>Desain Alur:</strong> Buat flowchart atau pseudocode untuk logika if-elif-else.</li>
-                        <li><strong>Implementasi:</strong> Tulis kode dengan komentar jelas di setiap baris.</li>
-                        <li><strong>Testing:</strong> Jalankan kode dengan berbagai input untuk memastikan semua kondisi bekerja.</li>
-                        <li><strong>Refleksi:</strong> Tambahkan cell teks untuk refleksi pengalaman menggunakan percabangan.</li>
-                        <li><strong>Dokumentasi:</strong> Jelaskan logika kode dan hasil di komentar.</li>
-                    </ul>
+                    <p class="text-smaller">Ikuti langkah sederhana berikut agar tugas lengkap dan teruji:</p>
+                    <ol class="text-smaller">
+                        <li><strong>Analisis & Rancang:</strong> Tentukan kondisi dan buat flow/pseudocode.</li>
+                        <li><strong>Implementasi & Test:</strong> Tulis kode dengan komentar, uji dengan beberapa kasus.</li>
+                        <li><strong>Refleksi & Dokumentasi:</strong> Catat hasil, kesimpulan, dan jelaskan logika di komentar.</li>
+                    </ol>
                 </div>
             </section>
 
