@@ -43,7 +43,6 @@
 /* ---- Trace layout (variant C) ---- */
 .trace-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-3); align-items: start; flex: 1; min-height: 0; }
 .trace-layout .left { display: flex; flex-direction: column; gap: 20px; }
-[data-ratio="4x3"] .trace-layout { grid-template-columns: 1fr; }
 
 /* ---- Compare ---- */
 .cmp-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-3); flex: 1; min-height: 0; align-items: start; }
@@ -69,7 +68,6 @@
 .ticket .tk { display: flex; flex-direction: column; gap: 18px; }
 .ticket .obj { display: inline-block; margin-bottom: 10px; padding: 2px 14px; border-radius: var(--shape-full); background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); font: 650 20px/1.4 var(--font-sans); }
 .ticket .ans { display: flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: var(--shape-xl); background: var(--md-sys-color-success-container); color: var(--md-sys-color-on-success-container); font: 600 22px/1.3 var(--font-sans); }
-[data-ratio="4x3"] .ticket { grid-template-columns: 1fr; }
 
 /* ---- Summary / assignment ---- */
 .summary { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: var(--space-2) var(--space-3); margin: var(--space-1) 0 var(--space-3); flex: 1; min-height: 0; }
