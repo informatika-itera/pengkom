@@ -1,0 +1,2 @@
+Sebelum: 10
+Sesudah: 7

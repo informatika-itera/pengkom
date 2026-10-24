@@ -1,0 +1,3 @@
+Golongan: B
+Masa kerja: 6
+Gaji: 4500000

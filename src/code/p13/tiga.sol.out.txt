@@ -1,0 +1,4 @@
+   Produk  Jumlah  Harga   Total
+8  Mangga      10  15000  150000
+3  Mangga      10  15000  150000
+9   Nanas       8  12000   96000

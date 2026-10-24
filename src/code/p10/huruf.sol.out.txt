@@ -1,0 +1,2 @@
+Kalimat: Belajar Python itu seru
+Jumlah a: 2

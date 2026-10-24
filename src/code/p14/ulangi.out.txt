@@ -1,0 +1,4 @@
+Angka: abc
+Bukan angka, ulangi
+Angka: 7
+Kamu mengetik 7

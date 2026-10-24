@@ -1,0 +1,6 @@
+Tebakan: 50
+Lebih kecil
+Tebakan: 30
+Lebih besar
+Tebakan: 42
+Benar!

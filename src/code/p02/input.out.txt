@@ -1,0 +1,4 @@
+Masukkan nama: Budi
+Halo Budi
+Masukkan umur: 20
+<class 'str'>

@@ -1,0 +1,5 @@
+  Produk  Jumlah  Harga  Total
+0   Apel       5  10000  50000
+1  Jeruk       3   8000  24000
+2   Apel       5  10000  50000
+Omzet: 686000

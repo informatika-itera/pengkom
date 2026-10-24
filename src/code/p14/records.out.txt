@@ -1,0 +1,5 @@
+Ani 80
+Budi 70
+   nama  nilai
+0   Ani     80
+1  Budi     70

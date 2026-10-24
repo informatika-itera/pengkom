@@ -1,0 +1,5 @@
+          Nama  Nilai
+0  Ahmad Surya   85.0
+2   Citra Dewi   72.0
+4    Eka Putri   91.0
+11
