@@ -1,0 +1,3 @@
+Panjang: 8
+Lebar: 5
+Luas: 40.0

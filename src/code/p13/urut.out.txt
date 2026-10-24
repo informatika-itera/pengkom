@@ -1,0 +1,4 @@
+            Nama  Nilai
+4      Eka Putri   91.0
+14  Oki Setiawan   88.0
+0    Ahmad Surya   85.0

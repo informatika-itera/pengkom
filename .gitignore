@@ -1,12 +1,15 @@
-.idea/
-*.iml
-*.iws
-*.eml
-out/
-.DS_Store
-.svn
-log/*.log
-tmp/**
 node_modules/
-.sass-cache
-pnpm-lock.yaml
+dist/
+.DS_Store
+.idea/
+.vscode/
+*.iml
+__pycache__/
+.venv/
+
+# berkas rujukan lokal, tidak dipublikasikan
+Topik Materi Pengenalan Komputasi.pdf
+
+# solusi dosen untuk latihan/tugas: hanya disimpan lokal (keluaran contohnya, *.sol.out.txt, tetap di repo)
+src/code/**/*.sol.py
+src/code/**/*.sol.in

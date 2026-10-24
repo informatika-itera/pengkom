@@ -1,0 +1,4 @@
+   Nama  Usia
+0   Ani    20
+1  Budi    19
+2  Cici    21

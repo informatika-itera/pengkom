@@ -1,0 +1,6 @@
+1 tambah, 2 lihat, 3 keluar
+Menu: 1
+Tugas: Belajar
+Menu: 2
+1. Belajar
+Menu: 3

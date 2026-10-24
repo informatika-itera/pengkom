@@ -1,78 +1,42 @@
-# Materi Ajar Pengenalan Komputasi (WI25-00003)
+# Pengenalan Komputasi
 
-Repositori ini berisi materi ajar dan slide presentasi untuk matakuliah **Pengenalan Komputasi** di **Institut Teknologi Sumatera (ITERA)**. Mata kuliah ini merupakan matakuliah wajib institusi dengan kode **WI25-00003**, diperuntukkan bagi mahasiswa non-informatika untuk memperkenalkan konsep pemikiran komputasional, logika pemrograman, dan penggunaan Python sebagai alat untuk otomasi tugas, pengolahan data sederhana, serta pengambilan keputusan logis.
+Slide kuliah **Pengenalan Komputasi** (Python) — Institut Teknologi Sumatera (ITERA), Semester Gasal 2026/2027.
+Dibangun dengan **Reveal.js 6 + React 19** (`@revealjs/react`), palet **Airbnb** dengan bahasa visual
+**Material Design 3 Expressive**, font **Google Sans Flex** / **Google Sans Code**, rumus **KaTeX**,
+dan sorotan sintaks **Shiki**. Lihat [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md).
 
-## Deskripsi Mata Kuliah
+## Menjalankan
 
-Mata kuliah ini tidak bertujuan untuk mencetak insinyur perangkat lunak, melainkan untuk membekali mahasiswa dengan keterampilan dasar dalam pemrograman Python guna mendukung bidang studi mereka masing-masing (misalnya biologi, ekonomi, sastra). Fokus utama adalah pada pengembangan logika berpikir komputasional melalui algoritma, struktur data dasar, dan aplikasi praktis.
+```bash
+bun install
+bun run dev            # http://127.0.0.1:8932/ (dashboard) — /pertemuan-N.html (deck)
+bun run build          # cek output kode + tsc + vite build → dist/
+bun run gen:outputs    # jalankan ulang semua potongan kode Python (butuh python3)
+bun run gen:palette    # hasilkan ulang src/theme/color.css
+```
 
-- **Durasi**: 16 minggu (4 modul)
-- **Target Mahasiswa**: Mahasiswa non-IT dari berbagai disiplin ilmu
-- **Alat Utama**: Python via Google Colab (tidak memerlukan instalasi lokal)
-- **Pendekatan Pembelajaran**: Kombinasi teori, aktivitas interaktif (simulasi robot, detektif logika), praktikum, dan proyek akhir
-- **Penilaian**: Kuis tengah semester, kuis akhir, dan presentasi proyek akhir
+Kontrol tampilan (kiri bawah): rasio Otomatis / 16:9 / 4:3 dan tema Otomatis / Terang / Gelap
+(`?ratio=4x3&theme=dark`). Navigasi: `←` `→`, `S` tampilan pembicara, `O` ikhtisar, `F` layar penuh.
+Ekspor PDF: tambahkan `?print-pdf` lalu cetak.
 
-## Struktur Mata Kuliah
+## Struktur
 
-Mata kuliah dibagi menjadi 4 modul utama, dengan slide presentasi untuk setiap pertemuan menggunakan framework [Reveal.js](https://revealjs.com/) untuk presentasi HTML interaktif.
+```
+slides/        halaman (root Vite): index.html = dashboard, pertemuan-N.html = deck
+src/theme/     token warna (generated), tipografi, bentuk, gerak, tema reveal
+src/ui/        Icon, KaTeX, komponen kode (CodeBlock, Output, TraceTable, …), highlight Shiki
+src/layouts/   layout slide
+src/deck-shell DeckShell, kanvas 16:9/4:3, kontrol tampilan
+src/decks/     pertemuan-NN.tsx + registry.ts (dashboard)
+src/code/      potongan kode Python + output asli (generated)
+scripts/       gen-palette, run-snippets, shoot/shot
+legacy/        deck HTML reveal.js lama — acuan isi untuk migrasi (tidak bisa dibuka sebagai slide)
+public/data/   berkas CSV untuk praktikum
+```
 
-### Modul 1: Logika dan Pengenalan Kode (Minggu 1-4)
+## Status migrasi
 
-- **Minggu 1**: Mengapa Kita Perlu Kode? (Algoritma, Otomasi, Google Colab)
-- **Minggu 2**: Variabel: Menyimpan Informasi (Tipe Data Dasar)
-- **Minggu 3**: Logika Percabangan (If/Else)
-- **Minggu 4**: Logika Lanjutan (Elif, AND/OR/NOT)
-
-### Modul 2: Otomasi Tugas (Minggu 5-8)
-
-- **Minggu 5**: Perulangan Dasar (For Loops)
-- **Minggu 6**: Bekerja dengan Data Majemuk (Lists)
-- **Minggu 7**: Review dan Kuis Tengah Semester
-- **Minggu 8**: Ujian Tengah Semester (UTS)
-
-### Modul 3: Pengolahan Data Sederhana (Minggu 9-12)
-
-- **Minggu 9**: Fungsi: Rumus Siap Pakai (Def Functions)
-- **Minggu 10**: Manipulasi Teks (Strings)
-- **Minggu 11**: Menggunakan Library (Modul Eksternal)
-- **Minggu 12**: Pengenalan Visualisasi Data (Matplotlib)
-
-### Modul 4: Proyek Aplikatif (Minggu 13-16)
-
-- **Minggu 13**: Bekerja dengan File (Input/Output)
-- **Minggu 14**: Strategi Pemecahan Masalah (Desain Algoritma)
-- **Minggu 15**: Kuis Akhir dan Finalisasi Proyek
-- **Minggu 16**: Presentasi Proyek Akhir (UAS)
-
-## File dalam Repositori
-
-- **Slide Presentasi**: File HTML untuk setiap pertemuan (e.g., `pertemuan02.html` hingga `pertemuan16.html`) menggunakan Reveal.js.
-- **Template**: `template.html` sebagai basis untuk membuat slide baru.
-- **Syllabus**: [Topik Materi Pengenalan Komputasi.pdf](Topik%20Materi%20Pengenalan%20Komputasi.pdf) - Dokumen lengkap outline mata kuliah.
-- **Demo dan Contoh**: Folder `examples/` berisi contoh presentasi Reveal.js.
-- **Tema dan Styling**: Folder `css/` dan `theme/` untuk kustomisasi tampilan.
-- **Plugin**: Folder `plugin/` untuk fitur tambahan seperti highlight kode, math, dll.
-
-## Cara Menggunakan
-
-1. **Menjalankan Slide**: Buka file HTML pertemuan di browser web (e.g., `pertemuan02.html`).
-2. **Edit Slide**: Gunakan editor teks untuk memodifikasi file HTML atau Markdown.
-3. **Praktikum**: Gunakan Google Colab untuk latihan coding sesuai panduan di slide.
-4. **Build dan Deploy**: Gunakan `gulpfile.js` untuk build presentasi (jalankan `npm install` dan `gulp serve`).
-
-## Teknologi yang Digunakan
-
-- **Reveal.js**: Framework presentasi HTML open-source.
-- **Python**: Bahasa pemrograman utama untuk praktikum.
-- **Google Colab**: Platform untuk coding tanpa instalasi.
-- **Gulp**: Untuk build dan development.
-
-## Lisensi
-
-Materi ini dikembangkan untuk keperluan akademik di Institut Teknologi Sumatera. Silakan gunakan dan modifikasi sesuai kebutuhan pendidikan.
-
----
-
-<div align="center">
-  Institut Teknologi Sumatera (ITERA) | Kode Matakuliah: WI25-00003
-</div>
+Sudah memakai desain baru: **Pertemuan 1–6 dan 9–14**.
+Python untuk menghasilkan keluaran kode: `python -m venv .venv && .venv/bin/pip install -r scripts/requirements.txt` (pandas, matplotlib, seaborn).
+Cara menambah deck: tulis `src/decks/pertemuan-NN.tsx`, salin `slides/pertemuan-5.html` (ubah `data-deck` dan judul),
+tambahkan cuplikan kode di `src/code/pNN/`, jalankan `bun run gen:outputs`, lalu set `published` ke `true` di `src/decks/registry.ts`.

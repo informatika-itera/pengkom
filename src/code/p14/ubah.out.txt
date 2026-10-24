@@ -1,0 +1,1 @@
+{'umur': 21, 'kota': 'Lampung'}

@@ -1,0 +1,7 @@
+   Produk  Jumlah  Harga
+0    Apel       5  10000
+2    Apel       5  10000
+3  Mangga      10  15000
+4  Pisang       7   6000
+8  Mangga      10  15000
+9   Nanas       8  12000

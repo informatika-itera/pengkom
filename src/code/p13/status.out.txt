@@ -1,0 +1,5 @@
+Nama,Status
+Ahmad Surya,Lulus
+Budi Rahman,Tidak lulus
+Citra Dewi,Lulus
+

@@ -1,0 +1,3 @@
+Angka 1: 10
+Angka 2: 5.5
+Hasil: 15.5

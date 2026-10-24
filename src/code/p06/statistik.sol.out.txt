@@ -1,0 +1,4 @@
+Total: 90
+Rata-rata: 30.0
+Max: 50
+Min: 10

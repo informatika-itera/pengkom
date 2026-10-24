@@ -1,0 +1,4 @@
+Umur: dua
+Harus angka
+Umur: 20
+Umur kamu 20

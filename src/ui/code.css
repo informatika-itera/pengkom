@@ -1,0 +1,113 @@
+/* Code, terminal and learning-activity components. Colors: generated tokens in theme/color.css. */
+:root {
+  --shiki-foreground: var(--md-sys-color-syntax-operator);
+  --shiki-token-keyword: var(--md-sys-color-syntax-keyword);
+  --shiki-token-function: var(--md-sys-color-syntax-function);
+  --shiki-token-constant: var(--md-sys-color-syntax-number);
+  --shiki-token-string: var(--md-sys-color-syntax-string);
+  --shiki-token-string-expression: var(--md-sys-color-syntax-string);
+  --shiki-token-parameter: var(--md-sys-color-syntax-builtin);
+  --shiki-token-comment: var(--md-sys-color-syntax-comment);
+  --shiki-token-punctuation: var(--md-sys-color-syntax-operator);
+  --shiki-token-link: var(--md-sys-color-syntax-function);
+}
+.mono, .reveal code { font-family: var(--font-mono); }
+.reveal :not(pre) > code { font-size: max(20px, .92em); line-height: inherit; font-weight: 500; color: var(--md-sys-color-primary); background: none; padding: 0; }
+
+.code-card { margin: 0; display: flex; flex-direction: column; border-radius: var(--shape-2xl); overflow: hidden; background: var(--md-sys-color-code-surface); }
+.code-bar { display: flex; align-items: center; gap: var(--space-1); padding: 14px 22px 4px; }
+.chip-lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 14px; border-radius: var(--shape-full); background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface-variant); font: 600 20px/1.2 var(--font-sans); }
+.code-bar .expand-btn { margin-left: auto; }
+.reveal .code-src { margin: 0; width: 100%; box-shadow: none; background: none; font: var(--t-code); padding: 8px 0 22px; counter-reset: ln; isolation: isolate; overflow-x: auto; }
+.code-src code { display: block; font: inherit; padding: 0; background: none; color: inherit; max-height: none; overflow: visible; }
+.code-src .ln { display: block; position: relative; padding-right: 28px; white-space: pre; min-height: 1.55em; line-height: 1.55; }
+.code-src .ln::before { counter-increment: ln; content: counter(ln); display: inline-block; width: 64px; padding-right: 20px; text-align: right; color: var(--md-sys-color-code-line-number); }
+.code-src .band { position: absolute; inset: 0; z-index: -1; background: var(--md-sys-color-primary-container); box-shadow: inset 6px 0 0 var(--md-sys-color-primary); }
+.code-src span[style*="token-keyword"] { font-weight: 600; }
+
+.pin { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: var(--shape-full); margin-left: 14px;
+  background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font: 700 20px/1 var(--font-sans); vertical-align: 2px; }
+.pin-note { display: flex; gap: 12px; align-items: flex-start; font: var(--t-body); font-size: 22px; }
+.pin-note .pin { margin: 3px 0 0; flex: none; }
+
+.expand-btn { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: var(--shape-full); cursor: zoom-in;
+  background: transparent; color: var(--md-sys-color-on-surface-variant); transition: background var(--motion-fast, .15s); }
+.expand-btn:hover, .expand-btn:focus-visible { background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
+.code-bar .expand-btn { margin-left: auto; }
+
+/* Colab-style output cell */
+.output { margin: 0; border-radius: var(--shape-2xl); overflow: hidden; background: var(--md-sys-color-surface-container-lowest);
+  border: 2px solid var(--md-sys-color-outline-variant); box-shadow: inset 8px 0 0 var(--md-sys-color-info); }
+.out-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px 0 28px; font: 650 20px/1 var(--font-sans); letter-spacing: .04em; color: var(--md-sys-color-info); }
+.out-bar .lbl { margin-right: auto; }
+.out-bar .expand-btn { color: var(--md-sys-color-on-surface-variant); }
+.reveal .out-body { box-sizing: border-box; margin: 0; width: 100%; box-shadow: none; background: none; font: var(--t-code); color: var(--md-sys-color-on-surface); padding: 2px 28px 14px; max-height: var(--out-max, 220px); overflow: auto; }
+.out-body code { display: block; font: inherit; padding: 0; background: none; color: inherit; max-height: none; overflow: visible; white-space: pre; }
+.out-body.wrap code { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Full-screen view (portal into <body>, so it is not scaled with the slide) */
+.expanded { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 3vmin; background: color-mix(in srgb, #000 62%, transparent); }
+.expanded .sheet { display: flex; flex-direction: column; width: min(1500px, 100%); max-height: 100%; border-radius: 28px; overflow: hidden;
+  background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); font-family: var(--font-sans); }
+.expanded .sheet-bar { display: flex; align-items: center; gap: 12px; padding: 14px 18px 14px 28px; font: 600 22px/1 var(--font-mono); background: var(--md-sys-color-surface-container); }
+.expanded .sheet-bar span { margin-right: auto; }
+.expanded .sheet-bar button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font: 600 18px/1 var(--font-sans); }
+.expanded .sheet-body { overflow: auto; padding: 8px 0; background: var(--md-sys-color-code-surface); }
+.expanded pre { margin: 0; font: 500 clamp(18px, 2.4vmin, 28px)/1.55 var(--font-mono); padding: 12px 0; counter-reset: ln; background: none; box-shadow: none; width: auto; }
+.expanded pre code { display: block; font: inherit; padding: 0; background: none; max-height: none; overflow: visible; }
+.expanded .code-src .ln { padding-right: 32px; }
+.expanded .code-src .ln::before { width: 80px; }
+.expanded .out-body { max-height: none; padding: 12px 32px; color: var(--md-sys-color-on-surface); }
+
+.predict { border-radius: var(--shape-2xl) var(--shape-2xl) var(--shape-2xl) var(--shape-sm); padding: 20px 24px;
+  background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); font: var(--t-body); font-size: 23px; }
+.predict .lbl { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font: 700 20px/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; }
+
+.code-run { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-3); align-items: start; flex: 1; min-height: 0; }
+.code-run .main, .code-run .side { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.slot { display: grid; } .slot > * { grid-area: 1 / 1; min-width: 0; }
+
+table.trace { align-self: start; width: 100%; border-collapse: separate; border-spacing: 0; border-radius: var(--shape-xl); overflow: hidden; background: var(--md-sys-color-surface-container-low); font: var(--t-body); font-size: 23px; }
+table.trace th { padding: 16px 20px 10px; text-align: left; font: 650 20px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant); }
+table.trace th.mono { text-transform: none; letter-spacing: 0; font-family: var(--font-mono); }
+table.trace td { padding: 11px 20px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+table.trace tr.round.current-fragment td { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); font-weight: 600; }
+table.trace tr.gap td { text-align: center; color: var(--md-sys-color-on-surface-variant); letter-spacing: .3em; }
+
+table.trace tr.fragment { transition: opacity .35s ease, background .35s ease; }
+
+/* no focus ring on the scrollable panes (they only take focus so the keyboard can scroll them) */
+.code-src:focus, .out-body:focus, .code-card:focus, .output:focus { outline: none; }
+.expand-btn:focus { outline: none; }
+.expand-btn:focus-visible { outline: none; background: var(--md-sys-color-surface-container-highest); }
+
+@media print { .expand-btn { display: none; } }
+
+.list-diagram { display: flex; gap: 0; align-self: flex-start; }
+.list-diagram .cell { display: grid; justify-items: center; gap: 6px; }
+.list-diagram .val { display: grid; place-items: center; min-width: 110px; height: 92px; padding: 0 18px; border: 3px solid var(--md-sys-color-primary);
+  margin-left: -3px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); font-size: 30px; font-weight: 600; }
+.list-diagram .cell:first-child .val { margin-left: 0; border-radius: var(--shape-xl) 0 0 var(--shape-xl); }
+.list-diagram .cell:last-child .val { border-radius: 0 var(--shape-xl) var(--shape-xl) 0; }
+.list-diagram .cell.on .val { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
+.list-diagram .pos, .list-diagram .neg { font: 600 22px/1 var(--font-mono); color: var(--md-sys-color-on-surface-variant); }
+.list-diagram .neg { color: var(--md-sys-color-tertiary); }
+
+table.ref { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: var(--shape-xl); overflow: hidden; background: var(--md-sys-color-surface-container-low); font: var(--t-body); font-size: 22px; }
+table.ref th { padding: 14px 22px 10px; text-align: left; font: 650 20px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant); }
+table.ref td { padding: 9px 22px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+table.ref td:first-child { font-family: var(--font-mono); font-weight: 600; color: var(--md-sys-color-primary); white-space: nowrap; }
+
+/* figures (matplotlib) sit on white like in a notebook, in both themes */
+.out-fig { display: block; width: calc(100% - 28px); margin: 4px 14px 14px 22px; padding: 8px; box-sizing: border-box; border-radius: var(--shape-md); background: #fff; }
+.out-fig.big { width: min(100%, 1100px); margin: 12px auto; }
+
+.code-run .notes { display: flex; flex-direction: column; gap: 18px; }
+.practice .out-fig, .ticket .out-fig { width: auto; max-width: calc(100% - 28px); max-height: 180px; margin: 2px auto 10px; }
+.practice .out-fig { max-height: 165px; }
+.out-fig { width: auto; max-width: calc(100% - 28px); max-height: 250px; margin-inline: auto; }
+.out-fig.big { max-height: none; width: min(100%, 1100px); }
+.code-run { --out-max: 330px; }
+.practice .out-body, .ticket .out-body { font-size: 20px; }
+table.ref.plain td:first-child { font-family: var(--font-sans); font-weight: 500; color: inherit; white-space: normal; }

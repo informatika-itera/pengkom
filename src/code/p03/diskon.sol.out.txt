@@ -1,0 +1,3 @@
+Harga: 100000
+Member (y/n): y
+Bayar: 80000.0

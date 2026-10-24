@@ -1,0 +1,3 @@
+Panjang: 5
+Lebar: 5
+Persegi

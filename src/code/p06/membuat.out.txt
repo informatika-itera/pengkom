@@ -1,0 +1,4 @@
+[]
+['apel', 'jeruk', 'mangga']
+[1, 'dua', 3.0, True]
+[1, 2, 3, 4, 5]

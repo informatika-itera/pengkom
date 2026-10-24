@@ -1,0 +1,5 @@
+(5, 3)
+Nama    object
+Umur     int64
+Kota    object
+dtype: object

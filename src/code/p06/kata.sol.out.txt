@@ -1,0 +1,2 @@
+Kata: ['py', 'js', 'py', 'py']
+py muncul 3 kali

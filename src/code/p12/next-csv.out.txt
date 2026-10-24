@@ -1,0 +1,6 @@
+   Nama  Umur       Kota
+0  Budi    20    Jakarta
+1  Siti    21    Bandung
+2  Andi    19   Surabaya
+3   Eko    35    Lampung
+4  Reza    33  Palembang

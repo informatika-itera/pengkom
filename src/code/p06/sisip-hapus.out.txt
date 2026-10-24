@@ -1,0 +1,2 @@
+['apel', 'jeruk', 'mangga']
+['apel', 'mangga']

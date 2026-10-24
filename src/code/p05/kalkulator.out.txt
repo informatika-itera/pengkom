@@ -1,0 +1,6 @@
+Operasi: +
+Angka 1: 10
+Angka 2: 5
+Hasil: 15.0
+Operasi: q
+Bye!
